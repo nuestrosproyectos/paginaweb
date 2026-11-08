@@ -159,6 +159,15 @@ section{position:relative}
 .paso h3{font-size:1.5rem;margin-bottom:.5rem}
 .paso p{color:var(--crema-70);font-size:1rem}
 
+/* evidencia — tira editorial (distinta a las tarjetas) */
+.evid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3rem;border-top:1px solid var(--linea)}
+.evid-item{display:flex;gap:1rem;padding:2.1rem 1.6rem;border-left:1px solid var(--linea)}
+.evid-item:first-child{border-left:none}
+.evid-n{font-family:"Fraunces",serif;font-size:1.7rem;color:var(--butter);line-height:1;flex:none}
+.evid-item b{display:block;font-size:1.18rem;margin-bottom:.4rem;font-weight:600}
+.evid-item p{color:var(--crema-70);font-size:.98rem}
+@media(max-width:900px){.evid{grid-template-columns:1fr}.evid-item{border-left:none;border-top:1px solid var(--linea);padding:1.5rem .2rem}.evid-item:first-child{border-top:none}}
+
 /* ============ TEST ============ */
 .test-shell{max-width:720px;margin:2.6rem auto 0;background:var(--panel);border:1px solid var(--linea);border-radius:26px;box-shadow:var(--sombra);overflow:hidden}
 .test-top{padding:1.3rem 1.6rem;border-bottom:1px solid var(--linea);display:flex;align-items:center;justify-content:space-between;gap:1rem}
@@ -286,6 +295,31 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
   .marquee-track{animation:none}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Angélica Giral",
+  "alternateName":"Angélica María Giral Vargas",
+  "jobTitle":"Psicóloga y coach de desarrollo personal",
+  "description":"Coaching 1:1 para mujeres: amor propio, límites y reconstrucción personal. Online, en español.",
+  "knowsLanguage":["es","en"],
+  "alumniOf":[
+    {"@type":"CollegeOrUniversity","name":"Universidad de Jaén"},
+    {"@type":"CollegeOrUniversity","name":"Universidad Loyola"}
+  ],
+  "makesOffer":{
+    "@type":"Offer",
+    "itemOffered":{
+      "@type":"Service",
+      "name":"Sesiones de coaching de amor propio para mujeres",
+      "serviceType":"Coaching de desarrollo personal",
+      "areaServed":"Online",
+      "availableLanguage":["es","en"]
+    }
+  }
+}
+</script>
 </head>
 <body>
 
@@ -327,7 +361,7 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
     <div class="retrato reveal" data-d="2">
       <img src="fotos/angelica-1.jpg" alt="Angélica Giral, psicóloga" width="912" height="1136" />
       <div class="firma"><b>Angélica Giral</b><small>Psicóloga</small></div>
-      <div class="sello"><span><b>10 años</b>en RR.HH.<br>y psicología</span></div>
+      <div class="sello"><span><b>+10 años</b>de experiencia</span></div>
     </div>
   </div>
 </section>
@@ -390,7 +424,7 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
 <section class="band" style="background:var(--bg-soft);border-block:1px solid var(--linea)">
   <div class="wrap sobre-grid">
     <div class="sobre-foto reveal">
-      <img src="fotos/angelica-escenario.jpg" alt="Angélica Giral impartiendo una conferencia" width="1023" height="1537" />
+      <img src="fotos/angelica-escenario.jpg" alt="Angélica Giral impartiendo una conferencia" width="1023" height="1537" loading="lazy" decoding="async" />
     </div>
     <div>
       <span class="kicker reveal">Quién te acompaña</span>
@@ -412,10 +446,10 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
     <span class="kicker reveal">Por qué puedes fiarte</span>
     <h2 class="sec-title reveal" data-d="1">Evidencia, no<br>frases bonitas</h2>
     <p class="sec-intro reveal" data-d="2">No hago charlas motivacionales. Detrás de cada sesión hay formación reglada, método y una investigación doctoral en curso.</p>
-    <div class="pasos">
-      <div class="paso reveal"><div class="num">01</div><h3>Investigación en curso</h3><p>Doctoranda en Psicología Social por la Universidad Loyola. Mi tesis estudia qué aportan de verdad la música y el movimiento a la salud mental.</p></div>
-      <div class="paso reveal" data-d="1"><div class="num">02</div><h3>Formación reglada</h3><p>Psicóloga titulada, con título de equivalencia reconocida en España, y máster en Psicología Positiva por la Universidad de Jaén.</p></div>
-      <div class="paso reveal" data-d="2"><div class="num">03</div><h3>He estado al otro lado</h3><p>Más de una década dentro de departamentos de Recursos Humanos: selección, bienestar y equipos a mi cargo.</p></div>
+    <div class="evid reveal" data-d="1">
+      <div class="evid-item"><span class="evid-n">01</span><div><b>Investigación en curso</b><p>Doctoranda en Psicología Social — Universidad Loyola. Mi tesis estudia qué aportan la música y el movimiento a la salud mental.</p></div></div>
+      <div class="evid-item"><span class="evid-n">02</span><div><b>Formación reglada</b><p>Psicóloga titulada (equivalencia reconocida en España) y máster en Psicología Positiva por la Universidad de Jaén.</p></div></div>
+      <div class="evid-item"><span class="evid-n">03</span><div><b>He estado al otro lado</b><p>Más de una década en Recursos Humanos: selección, bienestar y equipos a mi cargo.</p></div></div>
     </div>
   </div>
 </section>
