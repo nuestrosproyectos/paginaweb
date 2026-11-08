@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Únete a nuestra red de técnicos de gama blanca | España</title>
+  <meta name="description" content="Buscamos técnicos de reparación de gama blanca en toda España. Más trabajo en tu zona. Déjanos tus datos y te contactamos." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">📍 Técnicos en toda España</span>
+      <h1>¿Eres técnico de gama blanca y quieres más trabajo?</h1>
+      <p>Estamos ampliando nuestra red de técnicos en lavadoras, neveras, lavavajillas, hornos y secadoras. Tú reparas en tu zona, nosotros nos encargamos del resto.</p>
+      <a href="#unete" class="btn btn-primary">Quiero más trabajo →</a>
+    </div>
+  </header>
+
+  <!-- VENTAJAS -->
+  <section class="ventajas">
+    <div class="wrap">
+      <h2>Por qué unirte</h2>
+      <p class="sub">Menos buscar clientes, más reparar.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="ico">🔧</div>
+          <h3>Más volumen de trabajo</h3>
+          <p>Recibe encargos de reparación en tu zona sin tener que buscarlos tú.</p>
+        </div>
+        <div class="card">
+          <div class="ico">📅</div>
+          <h3>Tú marcas el ritmo</h3>
+          <p>Compatible con tu actividad actual. Llena los huecos de tu agenda.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🗺️</div>
+          <h3>En toda España</h3>
+          <p>Buscamos técnicos en cualquier provincia. Trabaja cerca de casa.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🤝</div>
+          <h3>Equipo que te respalda</h3>
+          <p>Formamos parte del mismo equipo. Tú al lío técnico, nosotros contigo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="form-section" id="unete">
+    <div class="wrap">
+      <h2>Únete a la red</h2>
+      <p class="sub">Déjanos tus datos y te escribimos por WhatsApp.</p>
+      <div class="form-card">
+        <form id="lead-form">
+          <div class="field">
+            <label for="nombre">Nombre y apellidos</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input type="tel" id="telefono" name="telefono" required autocomplete="tel" placeholder="600 00 00 00" />
+          </div>
+          <div class="field">
+            <label for="zona">Provincia o zona</label>
+            <input type="text" id="zona" name="zona" required placeholder="Ej.: Madrid, Sevilla, Valencia…" />
+          </div>
+          <div class="field">
+            <label for="experiencia">¿Tienes experiencia en reparación de gama blanca?</label>
+            <select id="experiencia" name="experiencia" required>
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="Sí, mucha">Sí, mucha</option>
+              <option value="Algo">Algo</option>
+              <option value="No, pero quiero aprender">No, pero quiero aprender</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="vehiculo">¿Tienes herramienta y vehículo propio?</label>
+            <select id="vehiculo" name="vehiculo" required>
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-wa btn-block">Enviar por WhatsApp</button>
+          <p class="nota">Al enviar aceptas nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><span id="marca-footer">Tu Marca</span> · Red de técnicos de gama blanca en España</p>
+    <p><a href="privacidad.html">Política de Privacidad</a></p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
