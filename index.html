@@ -202,6 +202,17 @@ section{position:relative}
 .quote p{font-family:"Fraunces",serif;font-style:italic;font-size:1.3rem;line-height:1.35;color:var(--crema);margin-bottom:1rem}
 .quote footer{font-size:.88rem;color:var(--crema-55);font-weight:600;font-style:normal}
 
+/* ============ SOCIAL / CONTENIDO REAL ============ */
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3rem}
+.social-card{display:flex;flex-direction:column;gap:.6rem;padding:2rem 1.7rem;background:var(--panel);border:1px solid var(--linea);border-radius:var(--radio);transition:transform .4s var(--ease),border-color .3s,background .3s}
+.social-card:hover{transform:translateY(-6px);border-color:var(--shock);background:var(--panel-2)}
+.social-card .sc-ic{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;background:var(--bg-2);color:var(--shock);margin-bottom:.3rem}
+.social-card .sc-ic svg{width:25px;height:25px}
+.social-card h3{font-size:1.4rem}
+.social-card p{color:var(--crema-70);font-size:1rem;flex:1}
+.social-card .sc-cta{color:var(--butter);font-weight:700;font-size:.95rem}
+@media(max-width:900px){.social-grid{grid-template-columns:1fr}}
+
 /* ============ FAQ ============ */
 .faq{max-width:760px;margin:2.6rem auto 0}
 .faq details{border-bottom:1px solid var(--linea);padding:.4rem 0}
@@ -395,18 +406,33 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
   </div>
 </section>
 
-<!-- ============ TESTIMONIOS ============ -->
+<!-- ============ CONÓCEME / CONTENIDO REAL ============ -->
 <section class="band">
   <div class="wrap" style="text-align:center">
-    <span class="kicker reveal" style="justify-content:center">Lo que dicen</span>
-    <h2 class="sec-title reveal" data-d="1">Quien ya ha trabajado conmigo</h2>
+    <span class="kicker reveal" style="justify-content:center">Conóceme antes de escribir</span>
+    <h2 class="sec-title reveal" data-d="1">Mira cómo pienso y cómo acompaño</h2>
+    <p class="sec-intro reveal" data-d="2" style="margin-inline:auto">Antes de dar el paso, escúchame y sígueme. Así ves si mi forma de trabajar encaja contigo — sin compromiso.</p>
   </div>
-  <div class="wrap quotes">
-    <blockquote class="quote reveal"><div class="stars">★★★★★</div><p>«Llegué sin saber decir que no. Salí sabiendo que podía.»</p><footer>— Testimonio de muestra</footer></blockquote>
-    <blockquote class="quote reveal" data-d="1"><div class="stars">★★★★★</div><p>«No me dio frases bonitas. Me dio herramientas que todavía uso.»</p><footer>— Testimonio de muestra</footer></blockquote>
-    <blockquote class="quote reveal" data-d="2"><div class="stars">★★★★★</div><p>«Volví a reconocerme. Eso no tiene precio.»</p><footer>— Testimonio de muestra</footer></blockquote>
+  <div class="wrap social-grid">
+    <a class="social-card reveal" href="https://open.spotify.com/show/2b9XlC9EUYUzwH4WVQVdoj" target="_blank" rel="noopener">
+      <div class="sc-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.66 13.5 1.62.42.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.1 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.32-1.26 11.4-1.02 15.9 1.62.54.3.72 1.02.42 1.56-.3.48-1.02.66-1.56.36z"/></svg></div>
+      <h3>Mi pódcast</h3>
+      <p>Conversaciones sobre amor propio, límites y salud mental. Escúchalo gratis en Spotify.</p>
+      <span class="sc-cta">Escuchar →</span>
+    </a>
+    <a class="social-card reveal" data-d="1" href="https://www.instagram.com/psi.angelicagiral" target="_blank" rel="noopener">
+      <div class="sc-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2zm0 1.62c-3.15 0-3.52.01-4.76.07-.9.04-1.39.2-1.72.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.33-.28.82-.32 1.72-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.2 1.39.32 1.72.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.12.82.28 1.72.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.2 1.72-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.33.28-.82.32-1.72.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.2-1.39-.32-1.72a2.85 2.85 0 00-.69-1.06 2.85 2.85 0 00-1.06-.69c-.33-.12-.82-.28-1.72-.32-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.42 5.42 0 110 10.84 5.42 5.42 0 010-10.84zm0 1.62a3.8 3.8 0 100 7.6 3.8 3.8 0 000-7.6zm5.6-.46a1.27 1.27 0 11-2.54 0 1.27 1.27 0 012.54 0z"/></svg></div>
+      <h3>@psi.angelicagiral</h3>
+      <p>Reflexiones y ejercicios de amor propio cada semana. Sígueme y empieza a cuidarte hoy.</p>
+      <span class="sc-cta">Seguir →</span>
+    </a>
+    <a class="social-card reveal" data-d="2" href="https://www.linkedin.com/in/angelicagiral" target="_blank" rel="noopener">
+      <div class="sc-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4V21H3V8.98zM9 8.98h3.84v1.64h.05c.54-1.02 1.84-2.1 3.8-2.1 4.06 0 4.81 2.67 4.81 6.15V21h-4v-5.35c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V21H9V8.98z"/></svg></div>
+      <h3>Mi trayectoria</h3>
+      <p>Psicóloga, doctoranda e investigadora. Mira mi recorrido profesional en LinkedIn.</p>
+      <span class="sc-cta">Ver perfil →</span>
+    </a>
   </div>
-  <p class="wrap reveal" style="text-align:center;color:var(--crema-55);font-size:.86rem;margin-top:1.5rem">Testimonios de muestra. Se sustituirán por opiniones reales con el permiso de cada persona.</p>
 </section>
 
 <!-- ============ FAQ ============ -->
@@ -448,6 +474,9 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
     </div>
     <div class="pie-links">
       <a data-wa data-msg="Hola Angélica, me gustaría más información sobre las sesiones de coaching.">WhatsApp</a>
+      <a href="https://www.instagram.com/psi.angelicagiral" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://open.spotify.com/show/2b9XlC9EUYUzwH4WVQVdoj" target="_blank" rel="noopener">Pódcast</a>
+      <a href="https://www.linkedin.com/in/angelicagiral" target="_blank" rel="noopener">LinkedIn</a>
       <a href="aviso-legal.html">Aviso legal</a>
       <a href="privacidad.html">Privacidad</a>
     </div>
