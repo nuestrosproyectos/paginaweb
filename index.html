@@ -12,8 +12,9 @@
 <meta property="og:site_name" content="Angélica Giral · Coaching" />
 <meta property="og:title" content="Quererte no es un lujo. Es la base de todo." />
 <meta property="og:description" content="Coaching 1:1 para mujeres que quieren reconstruirse: amor propio, límites y volver a elegirse. Con Angélica Giral, psicóloga." />
-<!-- HIGGSFIELD: generar og-coaching.jpg (1200x630) y colocar aquí -->
-<meta property="og:image" content="og-coaching.jpg" />
+<meta property="og:image" content="fotos/og-angelica.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -117,7 +118,8 @@ header.nav.scrolled{background:rgba(46,10,36,.82);backdrop-filter:blur(12px);box
 .retrato .ph{position:absolute;inset:0;display:grid;place-content:center;text-align:center;color:rgba(255,255,255,.92);gap:.4rem;padding:1.5rem}
 .retrato .ph span{font-size:2.6rem}
 .retrato .ph small{font-size:.74rem;letter-spacing:.05em;opacity:.85;max-width:22ch;margin-inline:auto}
-.retrato::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 52%,rgba(46,10,36,.55));mix-blend-mode:multiply}
+.retrato::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(46,10,36,.6));z-index:1}
+.retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 .retrato .firma{position:absolute;left:1.1rem;bottom:1.1rem;color:#fff;z-index:2}
 .retrato .firma b{font-family:"Fraunces",serif;font-size:1.5rem;font-weight:600;display:block;line-height:1}
 .retrato .firma small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
@@ -185,6 +187,7 @@ section{position:relative}
 /* ============ SOBRE MÍ ============ */
 .sobre-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:center}
 .sobre-foto{aspect-ratio:3/4;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);background:linear-gradient(160deg,var(--plum),var(--shock));position:relative}
+.sobre-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
 .sobre-foto .ph{position:absolute;inset:0;display:grid;place-content:center;color:rgba(255,255,255,.9);text-align:center;gap:.3rem;padding:1.4rem}
 .sobre-foto .ph span{font-size:2.3rem}
 .sobre-foto .ph small{font-size:.72rem;opacity:.85}
@@ -299,7 +302,7 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
     <div class="hero-copy">
       <span class="eyebrow">Coaching 1:1 para mujeres</span>
       <h1 id="hero-title">Quererte no es un lujo. Es la <span class="ital">base de todo.</span></h1>
-      <p class="lead reveal" data-d="1">Sesiones de acompañamiento para reconstruirte tras una relación que te apagó, poner límites sin culpa y volver a elegirte — a tu ritmo, en un espacio seguro.</p>
+      <p class="lead reveal" data-d="1">Acompaño a mujeres a dejar de olvidarse: reconstruirte tras una relación que te apagó, poner límites sin culpa y volver a elegirte. Sin prisa, a tu ritmo, en un espacio seguro.</p>
       <div class="hero-cta reveal" data-d="2">
         <a class="btn btn-primary btn-lg" data-wa data-msg="Hola Angélica, vengo de tu web y me gustaría reservar una primera sesión de coaching.">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
@@ -311,8 +314,7 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
     </div>
 
     <div class="retrato reveal" data-d="2">
-      <!-- HIGGSFIELD: retrato cálido de Angélica (4:5). Sustituir este bloque .ph por <img> o <video>. -->
-      <div class="ph"><span>🤍</span><small>Aquí irá un retrato cálido de Angélica (foto propia o imagen generada)</small></div>
+      <img src="fotos/angelica-1.jpg" alt="Angélica Giral, psicóloga" width="912" height="1136" />
       <div class="firma"><b>Angélica Giral</b><small>Psicóloga</small></div>
       <div class="sello"><span><b>10 años</b>en RR.HH.<br>y psicología</span></div>
     </div>
@@ -377,13 +379,12 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
 <section class="band" style="background:var(--bg-soft);border-block:1px solid var(--linea)">
   <div class="wrap sobre-grid">
     <div class="sobre-foto reveal">
-      <!-- HIGGSFIELD: foto de Angélica (3:4). Sustituir .ph por <img>. -->
-      <div class="ph"><span>🤍</span><small>Foto de Angélica</small></div>
+      <img src="fotos/angelica-escenario.jpg" alt="Angélica Giral impartiendo una conferencia" width="1023" height="1537" />
     </div>
     <div>
       <span class="kicker reveal">Quién te acompaña</span>
       <h2 class="sec-title reveal" data-d="1">Soy Angélica, y he<br>estado donde tú estás</h2>
-      <p class="sec-intro reveal" data-d="2">Soy psicóloga, máster en Psicología Positiva y doctoranda en Psicología Social. Antes de acompañar, pasé una década dentro de departamentos de Recursos Humanos. Aprendí algo que hoy es el corazón de mi trabajo: <b style="color:var(--crema)">quererse no es un capricho, es la base sobre la que se sostiene todo lo demás</b> — una vida, una familia, una carrera.</p>
+      <p class="sec-intro reveal" data-d="2">Durante años fui la mujer que lo sostenía todo: la que gestiona, la que anima, la que ayuda a todos… incluso cuando se olvidaba de sí misma. Soy psicóloga, máster en Psicología Positiva y doctoranda en Psicología Social, y pasé una década dentro de departamentos de Recursos Humanos. Pero lo que hoy es el corazón de mi trabajo lo aprendí viviéndolo: <b style="color:var(--crema)">quererse no es un capricho, es la base sobre la que se sostiene todo lo demás</b> — una vida, una familia, una carrera.</p>
       <div class="credss reveal" data-d="2">
         <span class="cred"><b>·</b> Psicóloga titulada</span>
         <span class="cred"><b>·</b> Máster en Psicología Positiva · U. de Jaén</span>
