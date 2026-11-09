@@ -177,14 +177,12 @@ section{position:relative}
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .carta-body p{font-family:"Nothing You Could Do",cursive;font-size:clamp(1.28rem,2.5vw,1.62rem);line-height:1.85;color:#3b1236;margin:0 0 .9rem;letter-spacing:.01em}
 .carta-firma{font-family:"Nothing You Could Do",cursive;font-size:clamp(2.3rem,5vw,3rem);color:#3b1236;line-height:1.2;margin:1.2rem 0 0 auto;width:max-content;transform:rotate(-4deg)}
-.carta .ch{opacity:0;transition:opacity .28s ease}
-.carta .ch.on{opacity:1}
+.carta .ch{opacity:0;filter:blur(1.5px);transition:opacity .55s ease-out,filter .55s ease-out}
+.carta .ch.on{opacity:1;filter:none}
 .carta .w{white-space:nowrap}
 .carta .tilde{position:relative}
 .carta .tilde::after{content:"";position:absolute;left:50%;top:.02em;width:.055em;height:.24em;background:currentColor;border-radius:.06em;transform:translateX(-20%) rotate(40deg);transform-origin:50% 100%}
 .carta .ti::after{top:.12em;left:42%;height:.2em}
-.pluma{position:absolute;left:0;top:0;width:30px;height:30px;pointer-events:none;opacity:0;transition:opacity .4s,transform .09s linear;z-index:2}
-.pluma.on{opacity:1}
 .carta-hint{font-size:.85rem;color:var(--crema-55);margin:-1.2rem 0 1.8rem;transition:opacity .4s}
 .sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .carta .btn{margin-top:.2rem}
@@ -470,7 +468,6 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
           <p>Cuando estés lista, aquí estoy.</p>
         </div>
         <div class="carta-firma">Angélica</div>
-        <svg class="pluma" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.2-4.6L15.8 4.8a2.2 2.2 0 013.1 0l.3.3a2.2 2.2 0 010 3.1L7.6 19.8 3 21z" fill="#3b1236" fill-opacity=".18" stroke="#3b1236" stroke-width="1.4" stroke-linejoin="round"/><path d="M14 6.6l3.4 3.4" stroke="#3b1236" stroke-width="1.4" stroke-linecap="round"/></svg>
       </div>
     </div>
     <p class="carta-hint" id="cartaHint" hidden>Toca la carta para leerla entera</p>
@@ -694,7 +691,7 @@ if(matchMedia("(pointer:fine)").matches && !matchMedia("(prefers-reduced-motion:
 (function(){
   const papel = document.getElementById("carta"); if(!papel) return;
   const body = papel.querySelector(".carta-body"), firma = papel.querySelector(".carta-firma");
-  const pluma = papel.querySelector(".pluma"), hint = document.getElementById("cartaHint");
+  const hint = document.getElementById("cartaHint");
   const quieto = matchMedia("(prefers-reduced-motion:reduce)").matches;
   // la fuente dibuja las tildes diminutas: se dibujan a mano encima
   const TILDE = {"á":"a","é":"e","í":"í","ó":"o","ú":"u"};
@@ -709,27 +706,26 @@ if(matchMedia("(pointer:fine)").matches && !matchMedia("(prefers-reduced-motion:
     words.forEach((w,wi)=>{
       const ws = document.createElement("span"); ws.className = "w";
       [...w].forEach(c=>{ const s=document.createElement("span"); s.className = "ch" + (TILDE[c] ? " tilde" + (c==="í" ? " ti" : "") : ""); s.textContent = TILDE[c] || c; ws.appendChild(s); chars.push(s);
-        pausa.push(/[.?!…:]/.test(c) ? 260 : /[,;]/.test(c) ? 120 : 0); });
+        pausa.push(/[.?!…:]/.test(c) ? 160 : /[,;]/.test(c) ? 70 : 0); });
       p.appendChild(ws); if(wi < words.length-1) p.appendChild(document.createTextNode(" "));
     });
-    pausa[pausa.length-1] += 450;
+    pausa[pausa.length-1] += 260;
   });
   if(quieto){ chars.forEach(c=>c.classList.add("on")); return; }
   firma.style.clipPath = "inset(0 100% 0 0)";
   let i = 0, done = false, t = null;
-  const mover = el => { pluma.style.transform = `translate(${el.offsetLeft + el.offsetWidth - 4}px,${el.offsetTop + el.offsetHeight - 30}px)`; };
-  const firmar = () => { if(hint) hint.style.opacity = 0; pluma.classList.remove("on");
+  const firmar = () => { if(hint) hint.style.opacity = 0;
     firma.style.transition = "clip-path 1.6s ease-in-out"; requestAnimationFrame(()=>requestAnimationFrame(()=>{ firma.style.clipPath = "inset(0 0 0 0)"; })); };
   const terminar = () => { if(done) return; done = true; clearTimeout(t); chars.forEach(c=>c.classList.add("on")); firmar(); };
   function paso(){
     if(done) return;
-    const c = chars[i]; c.classList.add("on"); mover(c);
-    const espera = 18 + pausa[i]; i++;
+    const c = chars[i]; c.classList.add("on");
+    const espera = 13 + pausa[i]; i++;
     if(i >= chars.length){ done = true; t = setTimeout(firmar, 350); return; }
     t = setTimeout(paso, espera);
   }
   papel.addEventListener("click", terminar);
-  const io = new IntersectionObserver(es=>{ if(es.some(e=>e.isIntersecting)){ io.disconnect(); pluma.classList.add("on"); if(hint) hint.hidden = false; paso(); } },{threshold:.3});
+  const io = new IntersectionObserver(es=>{ if(es.some(e=>e.isIntersecting)){ io.disconnect(); if(hint) hint.hidden = false; paso(); } },{threshold:.3});
   io.observe(papel);
 })();
 
