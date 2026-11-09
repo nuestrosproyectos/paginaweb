@@ -6,12 +6,10 @@ name: Publicar automáticamente al cambiar la web
 on:
   push:
     branches: [claude/psicologia-xbc50y]
-    paths:
-      - index.html
-      - aviso-legal.html
-      - privacidad.html
-      - .nojekyll
-      - "fotos/**"
+    paths-ignore:
+      - "tecnicos-gama-blanca/**"
+      - ".github/**"
+      - ".gitignore"
   workflow_dispatch:
 
 permissions:

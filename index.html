@@ -21,13 +21,77 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://nuestrosproyectos.github.io/paginaweb/fotos/og-coaching.jpg" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" href="fuentes/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fuentes/manrope-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FF5D8F'/><text x='50' y='71' font-size='62' font-family='Georgia,serif' font-style='italic' fill='%232E0A24' text-anchor='middle'>A</text></svg>" />
 
 <style>
+/* ============ FUENTES (servidas desde la propia web: más rápido y sin enviar datos a Google) ============ */
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url(fuentes/fraunces-italic-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url(fuentes/fraunces-italic-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url(fuentes/fraunces-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500 600;
+  font-display: swap;
+  src: url(fuentes/fraunces-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(fuentes/manrope-normal-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(fuentes/manrope-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin */
+@font-face {
+  font-family: 'Nothing You Could Do';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fuentes/nothing-you-could-do-normal-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ============ TOKENS — Berenjena & shock ============ */
 :root{
   --bg:#2E0A24;
@@ -290,7 +354,7 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
 .pie-grid{display:flex;flex-wrap:wrap;gap:1.4rem;justify-content:space-between;align-items:flex-start}
 .pie a{color:var(--crema-70);transition:color .2s}
 .pie a:hover{color:var(--butter)}
-.pie .legal{max-width:56ch;line-height:1.7;font-size:.84rem;color:var(--crema-40)}
+.pie .legal{max-width:56ch;line-height:1.7;font-size:.84rem;color:var(--crema-70)}
 .pie-links{display:flex;flex-wrap:wrap;gap:1.2rem;font-weight:600}
 
 /* ============ BARRA FLOTANTE MÓVIL ============ */
@@ -406,7 +470,7 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
     </div>
 
     <div class="retrato reveal" data-d="2">
-      <img src="fotos/angelica-1.jpg" alt="Angélica Giral, psicóloga" width="912" height="1136" />
+      <picture><source type="image/webp" srcset="fotos/angelica-1-480.webp 480w, fotos/angelica-1-640.webp 640w, fotos/angelica-1-912.webp 912w" sizes="(max-width:900px) calc(100vw - 2.4rem), 480px" /><img src="fotos/angelica-1.jpg" alt="Angélica Giral, psicóloga" width="912" height="1136" fetchpriority="high" /></picture>
       <div class="firma"><b>Angélica Giral</b><small>Psicóloga</small></div>
       <div class="sello"><span><b>+10 años</b>de experiencia</span></div>
     </div>
@@ -502,7 +566,7 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
 <section class="band" style="background:var(--bg-soft);border-block:1px solid var(--linea)">
   <div class="wrap sobre-grid">
     <div class="sobre-foto reveal">
-      <img src="fotos/angelica-escenario.jpg" alt="Angélica Giral impartiendo una conferencia" width="1023" height="1537" loading="lazy" decoding="async" />
+      <picture><source type="image/webp" srcset="fotos/angelica-escenario-480.webp 480w, fotos/angelica-escenario-800.webp 800w" sizes="(max-width:900px) 300px, 460px" /><img src="fotos/angelica-escenario.jpg" alt="Angélica Giral impartiendo una conferencia" width="1023" height="1537" loading="lazy" decoding="async" /></picture>
     </div>
     <div>
       <span class="kicker reveal">Quién te acompaña</span>
@@ -612,7 +676,7 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
       <a href="privacidad.html">Privacidad</a>
     </div>
   </div>
-  <div class="wrap" style="margin-top:2rem;font-size:.8rem;color:var(--crema-40)">© <span id="year"></span> Angélica Giral · Hecho con cuidado.</div>
+  <div class="wrap" style="margin-top:2rem;font-size:.8rem;color:var(--crema-55)">© <span id="year"></span> Angélica Giral · Hecho con cuidado.</div>
 </footer>
 
 <!-- ============ BARRA FLOTANTE MÓVIL ============ -->
