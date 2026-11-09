@@ -1,0 +1,40 @@
+name: Publicar web de coaching en GitHub Pages
+
+# Vive en la rama principal porque el entorno github-pages solo permite
+# publicar desde ella. Publica el contenido de la rama de coaching.
+on:
+  push:
+    branches: [claude/gama-blanca-recruitment-tiktok-l0l8ak]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/psicologia-xbc50y
+      - name: Preparar archivos de la web (sin la carpeta de técnicos)
+        run: |
+          mkdir _site
+          cp index.html aviso-legal.html privacidad.html .nojekyll _site/
+          cp -r fotos _site/
+          ls -R _site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
