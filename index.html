@@ -95,13 +95,14 @@ header.nav.scrolled{background:rgba(46,10,36,.82);backdrop-filter:blur(12px);box
 
 /* ============ HERO ============ */
 .hero{position:relative;padding:9.5rem 0 4.5rem;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.55}
 .hero-bg{position:absolute;inset:0;z-index:-1;
   background:
-    radial-gradient(120% 95% at 84% 2%, rgba(90,18,71,.95), transparent 52%),
-    radial-gradient(90% 80% at 6% 102%, rgba(255,93,143,.16), transparent 58%),
-    radial-gradient(60% 60% at 95% 90%, rgba(244,201,93,.08), transparent 60%),
-    linear-gradient(180deg,var(--bg) 0%, var(--bg-2) 100%);
+    linear-gradient(100deg, rgba(46,10,36,.94) 0%, rgba(46,10,36,.62) 40%, rgba(46,10,36,.22) 70%, transparent 90%),
+    radial-gradient(90% 80% at 6% 102%, rgba(255,93,143,.12), transparent 58%),
+    linear-gradient(180deg, rgba(46,10,36,.35) 0%, rgba(38,8,32,.74) 100%);
 }
+@media(max-width:900px){.hero-bg{background:linear-gradient(180deg, rgba(46,10,36,.55) 0%, rgba(46,10,36,.72) 55%, rgba(38,8,32,.82) 100%)}}
 .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--shock);margin-bottom:1.4rem}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--shock)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
@@ -358,6 +359,9 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="inicio">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="fotos/hero-seda-poster.jpg" aria-hidden="true">
+    <source src="fotos/hero-seda.mp4" type="video/mp4" />
+  </video>
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
@@ -588,6 +592,16 @@ window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
 if(heroCta && "IntersectionObserver" in window){
   new IntersectionObserver(es=>{ es.forEach(e=> floatbar.classList.toggle("show", !e.isIntersecting && window.scrollY > 300)); },{rootMargin:"-10px"}).observe(heroCta);
 }
+
+/* vídeo del hero: pausar fuera de pantalla + respetar reduce motion */
+(function(){
+  const vid = document.querySelector(".hero-video");
+  if(!vid) return;
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){ vid.removeAttribute("autoplay"); vid.pause(); return; }
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ vid.play().catch(()=>{}); } else { vid.pause(); } }),{threshold:.05}).observe(vid);
+  }
+})();
 
 if("IntersectionObserver" in window){
   const io = new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }); },{threshold:.08, rootMargin:"0px 0px -4% 0px"});
