@@ -26,11 +26,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: claude/psicologia-xbc50y
-      - name: Preparar archivos de la web (sin la carpeta de técnicos)
+      - name: Preparar archivos de la web (todo menos técnicos y archivos internos)
         run: |
           mkdir _site
-          cp index.html aviso-legal.html privacidad.html .nojekyll _site/
-          cp -r fotos _site/
+          rsync -a --exclude '_site' --exclude '.git' --exclude '.github' --exclude '.gitignore' \
+                   --exclude 'tecnicos-gama-blanca' --exclude 'README.md' ./ _site/
           ls -R _site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
