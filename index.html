@@ -19,7 +19,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FF5D8F'/><text x='50' y='71' font-size='62' font-family='Georgia,serif' font-style='italic' fill='%232E0A24' text-anchor='middle'>A</text></svg>" />
 
@@ -165,14 +165,30 @@ section{position:relative}
 .incluye-cta p{color:var(--crema-55);font-size:.9rem;margin-top:.9rem}
 @media(max-width:760px){.incluye-grid{grid-template-columns:1fr 1fr}.inc{padding:1.6rem 1rem}.inc:nth-child(odd){border-left:none}.inc:nth-child(n+3){border-top:1px solid var(--linea)}.inc b{font-size:1.02rem}}
 
-/* carta personal */
+/* carta personal — escrita a mano */
 .carta-band{background:var(--bg-soft);border-block:1px solid var(--linea)}
-.carta{max-width:680px;margin-inline:auto}
+.carta{max-width:760px;margin-inline:auto}
 .carta .kicker{justify-content:flex-start}
-.carta-body p{font-family:"Fraunces",serif;font-size:clamp(1.22rem,2.3vw,1.6rem);line-height:1.5;color:var(--crema);margin-bottom:1.1rem;text-wrap:pretty}
-.carta-body p:first-of-type::first-letter{font-size:3.2em;float:left;line-height:.72;padding:.06em .14em 0 0;color:var(--butter);font-family:"Fraunces",serif;font-weight:600}
-.carta-firma{font-family:"Caveat",cursive;font-size:2.9rem;color:var(--butter);line-height:1;margin:1.2rem 0 1.9rem}
+.carta-papel{position:relative;transform:rotate(-.7deg);margin:.6rem 0 2.2rem;border-radius:3px;
+  padding:clamp(1.9rem,5vw,3.4rem) clamp(1.4rem,5.5vw,3.8rem) clamp(1.6rem,4vw,2.6rem);
+  background:radial-gradient(120% 70% at 50% 0%,rgba(255,255,255,.6),transparent 60%),radial-gradient(130% 110% at 100% 100%,rgba(120,70,40,.13),transparent 55%),radial-gradient(90% 90% at 0% 100%,rgba(120,70,40,.08),transparent 60%),#F4E9DA;
+  box-shadow:0 34px 70px -30px rgba(0,0,0,.85),0 6px 18px -8px rgba(0,0,0,.45)}
+.carta-papel::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.carta-body p{font-family:"Nothing You Could Do",cursive;font-size:clamp(1.28rem,2.5vw,1.62rem);line-height:1.85;color:#3b1236;margin:0 0 .9rem;letter-spacing:.01em}
+.carta-firma{font-family:"Nothing You Could Do",cursive;font-size:clamp(2.3rem,5vw,3rem);color:#3b1236;line-height:1.2;margin:1.2rem 0 0 auto;width:max-content;transform:rotate(-4deg)}
+.carta .ch{opacity:0;transition:opacity .28s ease}
+.carta .ch.on{opacity:1}
+.carta .w{white-space:nowrap}
+.carta .tilde{position:relative}
+.carta .tilde::after{content:"";position:absolute;left:50%;top:.02em;width:.055em;height:.24em;background:currentColor;border-radius:.06em;transform:translateX(-20%) rotate(40deg);transform-origin:50% 100%}
+.carta .ti::after{top:.12em;left:42%;height:.2em}
+.pluma{position:absolute;left:0;top:0;width:30px;height:30px;pointer-events:none;opacity:0;transition:opacity .4s,transform .09s linear;z-index:2}
+.pluma.on{opacity:1}
+.carta-hint{font-size:.85rem;color:var(--crema-55);margin:-1.2rem 0 1.8rem;transition:opacity .4s}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .carta .btn{margin-top:.2rem}
+@media(max-width:600px){.carta-papel{transform:rotate(-.4deg)}}
 
 /* respira conmigo */
 .respira{position:relative;text-align:center;overflow:hidden;background:radial-gradient(60% 55% at 50% 42%, rgba(90,18,71,.55), transparent 72%), var(--bg-2)}
@@ -444,14 +460,20 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
 <section class="band carta-band">
   <div class="wrap carta">
     <span class="kicker reveal">Una carta para ti</span>
-    <div class="carta-body reveal" data-d="1">
-      <p>Si has llegado hasta aquí, me atrevo a imaginar algo: que llevas mucho tiempo siendo fuerte para todos y que, por dentro, estás más cansada de lo que cuentas.</p>
-      <p>Que respondes «estoy bien» en automático. Que te ocupas de todo y de todas, menos de ti. Y que una parte de ti intuye que mereces algo más que aguantar.</p>
-      <p>Yo también estuve ahí. Y entendí —viviéndolo, no en una frase bonita— que quererte no es ponerte la última: es la base desde la que se sostiene todo lo demás.</p>
-      <p>No necesitas estar rota para empezar. Solo querer dejar de abandonarte.</p>
-      <p>Cuando estés lista, aquí estoy.</p>
+    <div class="reveal" data-d="1">
+      <div class="carta-papel" id="carta">
+        <div class="carta-body">
+          <p>Si has llegado hasta aquí, me atrevo a imaginar algo: que llevas mucho tiempo siendo fuerte para todos y que, por dentro, estás más cansada de lo que cuentas.</p>
+          <p>Que respondes «estoy bien» en automático. Que te ocupas de todo y de todas, menos de ti. Y que una parte de ti intuye que mereces algo más que aguantar.</p>
+          <p>Yo también estuve ahí. Y entendí —viviéndolo, no en una frase bonita— que quererte no es ponerte la última: es la base desde la que se sostiene todo lo demás.</p>
+          <p>No necesitas estar rota para empezar. Solo querer dejar de abandonarte.</p>
+          <p>Cuando estés lista, aquí estoy.</p>
+        </div>
+        <div class="carta-firma">Angélica</div>
+        <svg class="pluma" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.2-4.6L15.8 4.8a2.2 2.2 0 013.1 0l.3.3a2.2 2.2 0 010 3.1L7.6 19.8 3 21z" fill="#3b1236" fill-opacity=".18" stroke="#3b1236" stroke-width="1.4" stroke-linejoin="round"/><path d="M14 6.6l3.4 3.4" stroke="#3b1236" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
     </div>
-    <div class="carta-firma reveal" data-d="1">Angélica</div>
+    <p class="carta-hint" id="cartaHint" hidden>Toca la carta para leerla entera</p>
     <a class="btn btn-primary btn-lg reveal" data-d="2" data-wa data-msg="Hola Angélica, he leído tu carta en la web y me gustaría dar el paso. ¿Hablamos?">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
       Escribirle a Angélica
@@ -667,6 +689,49 @@ if(matchMedia("(pointer:fine)").matches && !matchMedia("(prefers-reduced-motion:
     btn.addEventListener("mouseleave",()=>{ btn.style.transform=""; });
   });
 }
+
+/* ======== CARTA ESCRITA A MANO ======== */
+(function(){
+  const papel = document.getElementById("carta"); if(!papel) return;
+  const body = papel.querySelector(".carta-body"), firma = papel.querySelector(".carta-firma");
+  const pluma = papel.querySelector(".pluma"), hint = document.getElementById("cartaHint");
+  const quieto = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  // la fuente dibuja las tildes diminutas: se dibujan a mano encima
+  const TILDE = {"á":"a","é":"e","í":"í","ó":"o","ú":"u"};
+  // copia accesible del texto completo
+  const sr = document.createElement("div"); sr.className = "sr-only";
+  sr.textContent = [...body.querySelectorAll("p")].map(p=>p.textContent).join(" ") + " Angélica";
+  papel.prepend(sr); body.setAttribute("aria-hidden","true"); firma.setAttribute("aria-hidden","true");
+  // trocear en letras
+  const chars = [], pausa = [];
+  body.querySelectorAll("p").forEach(p=>{
+    const words = p.textContent.trim().split(/\s+/); p.textContent = "";
+    words.forEach((w,wi)=>{
+      const ws = document.createElement("span"); ws.className = "w";
+      [...w].forEach(c=>{ const s=document.createElement("span"); s.className = "ch" + (TILDE[c] ? " tilde" + (c==="í" ? " ti" : "") : ""); s.textContent = TILDE[c] || c; ws.appendChild(s); chars.push(s);
+        pausa.push(/[.?!…:]/.test(c) ? 260 : /[,;]/.test(c) ? 120 : 0); });
+      p.appendChild(ws); if(wi < words.length-1) p.appendChild(document.createTextNode(" "));
+    });
+    pausa[pausa.length-1] += 450;
+  });
+  if(quieto){ chars.forEach(c=>c.classList.add("on")); return; }
+  firma.style.clipPath = "inset(0 100% 0 0)";
+  let i = 0, done = false, t = null;
+  const mover = el => { pluma.style.transform = `translate(${el.offsetLeft + el.offsetWidth - 4}px,${el.offsetTop + el.offsetHeight - 30}px)`; };
+  const firmar = () => { if(hint) hint.style.opacity = 0; pluma.classList.remove("on");
+    firma.style.transition = "clip-path 1.6s ease-in-out"; requestAnimationFrame(()=>requestAnimationFrame(()=>{ firma.style.clipPath = "inset(0 0 0 0)"; })); };
+  const terminar = () => { if(done) return; done = true; clearTimeout(t); chars.forEach(c=>c.classList.add("on")); firmar(); };
+  function paso(){
+    if(done) return;
+    const c = chars[i]; c.classList.add("on"); mover(c);
+    const espera = 18 + pausa[i]; i++;
+    if(i >= chars.length){ done = true; t = setTimeout(firmar, 350); return; }
+    t = setTimeout(paso, espera);
+  }
+  papel.addEventListener("click", terminar);
+  const io = new IntersectionObserver(es=>{ if(es.some(e=>e.isIntersecting)){ io.disconnect(); pluma.classList.add("on"); if(hint) hint.hidden = false; paso(); } },{threshold:.3});
+  io.observe(papel);
+})();
 
 /* ======== RESPIRA CONMIGO ======== */
 (function(){
