@@ -1,0 +1,30 @@
+name: Publicar automáticamente al cambiar la web
+
+# GitHub Pages solo admite publicar desde la rama principal (regla del entorno
+# github-pages). Este workflow no publica: cuando cambia la web en esta rama,
+# lanza el workflow "pages.yml" de la rama principal, que es el que publica.
+on:
+  push:
+    branches: [claude/psicologia-xbc50y]
+    paths:
+      - index.html
+      - aviso-legal.html
+      - privacidad.html
+      - .nojekyll
+      - "fotos/**"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  lanzar-publicacion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lanzar la publicación en la rama principal
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RAMA_PRINCIPAL=$(gh api "repos/${{ github.repository }}" --jq .default_branch)
+          echo "Publicando desde $RAMA_PRINCIPAL el contenido de ${{ github.ref_name }}"
+          gh workflow run pages.yml --repo "${{ github.repository }}" --ref "$RAMA_PRINCIPAL"
