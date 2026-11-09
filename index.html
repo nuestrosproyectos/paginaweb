@@ -177,7 +177,7 @@ section{position:relative}
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .carta-body p{font-family:"Nothing You Could Do",cursive;font-size:clamp(1.28rem,2.5vw,1.62rem);line-height:1.85;color:#3b1236;margin:0 0 .9rem;letter-spacing:.01em}
 .carta-firma{font-family:"Nothing You Could Do",cursive;font-size:clamp(2.3rem,5vw,3rem);color:#3b1236;line-height:1.2;margin:1.2rem 0 0 auto;width:max-content;transform:rotate(-4deg)}
-.carta .ch{opacity:0;filter:blur(1.5px);transition:opacity .55s ease-out,filter .55s ease-out}
+.carta .ch{opacity:0;filter:blur(1.5px);transition:opacity .8s ease-out,filter .8s ease-out}
 .carta .ch.on{opacity:1;filter:none}
 .carta .w{white-space:nowrap}
 .carta .tilde{position:relative}
@@ -692,6 +692,8 @@ if(matchMedia("(pointer:fine)").matches && !matchMedia("(prefers-reduced-motion:
   const papel = document.getElementById("carta"); if(!papel) return;
   const body = papel.querySelector(".carta-body"), firma = papel.querySelector(".carta-firma");
   const hint = document.getElementById("cartaHint");
+  // RITMO DE ESCRITURA (milisegundos): súbelos para más lento, bájalos para más rápido
+  const RITMO = { letra: 28, coma: 140, punto: 320, parrafo: 550 };
   const quieto = matchMedia("(prefers-reduced-motion:reduce)").matches;
   // la fuente dibuja las tildes diminutas: se dibujan a mano encima
   const TILDE = {"á":"a","é":"e","í":"í","ó":"o","ú":"u"};
@@ -706,10 +708,10 @@ if(matchMedia("(pointer:fine)").matches && !matchMedia("(prefers-reduced-motion:
     words.forEach((w,wi)=>{
       const ws = document.createElement("span"); ws.className = "w";
       [...w].forEach(c=>{ const s=document.createElement("span"); s.className = "ch" + (TILDE[c] ? " tilde" + (c==="í" ? " ti" : "") : ""); s.textContent = TILDE[c] || c; ws.appendChild(s); chars.push(s);
-        pausa.push(/[.?!…:]/.test(c) ? 160 : /[,;]/.test(c) ? 70 : 0); });
+        pausa.push(/[.?!…:]/.test(c) ? RITMO.punto : /[,;]/.test(c) ? RITMO.coma : 0); });
       p.appendChild(ws); if(wi < words.length-1) p.appendChild(document.createTextNode(" "));
     });
-    pausa[pausa.length-1] += 260;
+    pausa[pausa.length-1] += RITMO.parrafo;
   });
   if(quieto){ chars.forEach(c=>c.classList.add("on")); return; }
   firma.style.clipPath = "inset(0 100% 0 0)";
@@ -720,7 +722,7 @@ if(matchMedia("(pointer:fine)").matches && !matchMedia("(prefers-reduced-motion:
   function paso(){
     if(done) return;
     const c = chars[i]; c.classList.add("on");
-    const espera = 13 + pausa[i]; i++;
+    const espera = RITMO.letra + pausa[i]; i++;
     if(i >= chars.length){ done = true; t = setTimeout(firmar, 350); return; }
     t = setTimeout(paso, espera);
   }
