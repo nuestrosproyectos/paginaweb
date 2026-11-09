@@ -140,35 +140,16 @@ header.nav.scrolled{background:rgba(46,10,36,.82);backdrop-filter:blur(12px);box
 /* ============ SECCIONES ============ */
 section{position:relative}
 .band{padding:clamp(4rem,9vw,7rem) 0}
-.band-alt{background:linear-gradient(165deg,#3C0F31 0%, #2a0820 100%);border-block:1px solid var(--linea)}
 .kicker{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--shock);margin-bottom:1.1rem}
-.band-alt .kicker{color:var(--butter)}
 .kicker::before{content:"";width:22px;height:1px;background:currentColor;opacity:.7}
 .sec-title{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:1.1rem;text-wrap:balance}
 .sec-intro{font-size:1.12rem;color:var(--crema-70);max-width:52ch;text-wrap:pretty}
 
 /* "para quién" — señales */
-.senales{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.6rem}
-.senal{display:flex;gap:.9rem;align-items:flex-start;padding:1.3rem 1.4rem;background:var(--panel);border:1px solid var(--linea);border-radius:var(--radio)}
-.senal .ic{flex:none;width:30px;height:30px;color:var(--shock)}
-.senal p{font-size:1.02rem;color:var(--crema-70)}
-.senal b{color:var(--crema);font-weight:600}
 
 /* método / pasos */
-.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3rem}
-.paso{position:relative;padding:2rem 1.6rem 1.7rem;border:1px solid var(--linea);border-radius:var(--radio);background:rgba(247,233,222,.03)}
-.paso .num{font-family:"Fraunces",serif;font-size:2.5rem;color:var(--butter);line-height:1;margin-bottom:.7rem}
-.paso h3{font-size:1.5rem;margin-bottom:.5rem}
-.paso p{color:var(--crema-70);font-size:1rem}
 
 /* evidencia — tira editorial (distinta a las tarjetas) */
-.evid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3rem;border-top:1px solid var(--linea)}
-.evid-item{display:flex;gap:1rem;padding:2.1rem 1.6rem;border-left:1px solid var(--linea)}
-.evid-item:first-child{border-left:none}
-.evid-n{font-family:"Fraunces",serif;font-size:1.7rem;color:var(--butter);line-height:1;flex:none}
-.evid-item b{display:block;font-size:1.18rem;margin-bottom:.4rem;font-weight:600}
-.evid-item p{color:var(--crema-70);font-size:.98rem}
-@media(max-width:900px){.evid{grid-template-columns:1fr}.evid-item{border-left:none;border-top:1px solid var(--linea);padding:1.5rem .2rem}.evid-item:first-child{border-top:none}}
 
 /* qué incluye una sesión */
 .incluye-panel{margin-top:2.6rem;background:linear-gradient(165deg,var(--panel),#2a0820);border:1px solid var(--linea);border-radius:26px;box-shadow:var(--sombra);overflow:hidden}
@@ -220,6 +201,7 @@ section{position:relative}
 .fit-list{list-style:none;display:flex;flex-direction:column;gap:.95rem}
 .fit-list li{display:flex;gap:.7rem;align-items:flex-start;color:var(--crema-70);font-size:1.02rem}
 .fit-list li svg{flex:none;width:21px;height:21px;margin-top:.15rem}
+.fit-list li b{color:var(--crema);font-weight:600}
 .fit-col.yes li svg{color:var(--shock)}
 .fit-col.no li svg{color:var(--crema-40)}
 .fit-cta{text-align:center;margin-top:2.4rem}
@@ -263,22 +245,8 @@ section{position:relative}
 .cred b{color:var(--butter)}
 
 /* ============ TESTIMONIOS ============ */
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3rem}
-.quote{padding:1.8rem;background:var(--panel);border:1px solid var(--linea);border-radius:var(--radio)}
-.quote .stars{color:var(--shock);letter-spacing:.1em;margin-bottom:.8rem;font-size:.9rem}
-.quote p{font-family:"Fraunces",serif;font-style:italic;font-size:1.3rem;line-height:1.35;color:var(--crema);margin-bottom:1rem}
-.quote footer{font-size:.88rem;color:var(--crema-55);font-weight:600;font-style:normal}
 
 /* ============ SOCIAL / CONTENIDO REAL ============ */
-.social-grid-REMOVED{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3rem}
-.social-card{display:flex;flex-direction:column;gap:.6rem;padding:2rem 1.7rem;background:var(--panel);border:1px solid var(--linea);border-radius:var(--radio);transition:transform .4s var(--ease),border-color .3s,background .3s}
-.social-card:hover{transform:translateY(-6px);border-color:var(--shock);background:var(--panel-2)}
-.social-card .sc-ic{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;background:var(--bg-2);color:var(--shock);margin-bottom:.3rem}
-.social-card .sc-ic svg{width:25px;height:25px}
-.social-card h3{font-size:1.4rem}
-.social-card p{color:var(--crema-70);font-size:1rem;flex:1}
-.social-card .sc-cta{color:var(--butter);font-weight:700;font-size:.95rem}
-@media(max-width:900px){.social-grid-REMOVED{grid-template-columns:1fr}}
 
 /* ============ FAQ ============ */
 .faq{max-width:760px;margin:2.6rem auto 0}
@@ -335,11 +303,8 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
   .retrato img{object-position:center 12%}
   .sello{width:82px;height:82px;right:12px;top:12px}
   .hero p.lead{max-width:none}
-  .pasos{grid-template-columns:1fr}
-  .quotes{grid-template-columns:1fr}
   .sobre-grid{grid-template-columns:1fr;gap:2rem}
   .sobre-foto{max-width:300px;margin-inline:auto}
-  .senales{grid-template-columns:1fr}
   .nav .btn.desktop{display:none}
   .float-bar{display:block}
 }
@@ -437,18 +402,40 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
   </div>
 </div>
 
-<!-- ============ PARA QUIÉN ============ -->
+<!-- ============ ¿ES PARA TI? ============ -->
 <section class="band">
-  <div class="wrap">
-    <span class="kicker reveal">Para ti si…</span>
+  <div class="wrap" style="text-align:center">
+    <span class="kicker reveal" style="justify-content:center">¿Es para ti?</span>
     <h2 class="sec-title reveal" data-d="1">Te cuidas de todos<br>menos de ti</h2>
-    <p class="sec-intro reveal" data-d="2">No hace falta estar rota para merecer un espacio propio. Esto es para ti si te reconoces en alguna de estas:</p>
-    <div class="senales">
-      <div class="senal reveal"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><p><b>Sales de una relación</b> que te fue apagando y ya no te reconoces.</p></div>
-      <div class="senal reveal" data-d="1"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><p><b>Dices «sí»</b> cuando quieres decir «no», y luego te pesa.</p></div>
-      <div class="senal reveal" data-d="2"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><p><b>Postergas</b> lo tuyo una y otra vez: ya habrá tiempo para mí.</p></div>
-      <div class="senal reveal" data-d="3"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><p><b>Te hablas mal:</b> esa voz que no le permitirías a nadie usar contigo.</p></div>
+    <p class="sec-intro reveal" data-d="2" style="margin-inline:auto">No hace falta estar rota para merecer un espacio propio. Pero prefiero ser honesta: esto no es para todo el mundo. Mira en qué columna te reconoces.</p>
+  </div>
+  <div class="wrap fit-grid">
+    <div class="fit-col yes reveal">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Es para ti si…</h3>
+      <ul class="fit-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Sales de una relación</b> (o de una etapa) que te fue apagando y ya no te reconoces.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Dices «sí»</b> cuando quieres decir «no», y luego te pesa.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Postergas lo tuyo</b> una y otra vez: «ya habrá tiempo para mí».</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Te hablas con una dureza</b> que no le permitirías a nadie.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Quieres cambiar de verdad</b>, con método y no con frases bonitas.</span></li>
+      </ul>
     </div>
+    <div class="fit-col no reveal" data-d="1">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg> No es para ti si…</h3>
+      <ul class="fit-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Buscas una varita mágica o cambiar sin implicarte.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Quieres que decidan por ti en vez de acompañarte a decidir.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Lo que necesitas es tratamiento psicológico clínico (te oriento con honestidad hacia dónde ir).</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Esperas que todo cambie en una sola sesión.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap fit-cta reveal" data-d="1">
+    <p>¿Te has reconocido en la primera columna? Entonces hablemos.</p>
+    <a class="btn btn-primary btn-lg" data-wa data-msg="Hola Angélica, me he reconocido en tu web y creo que el coaching es para mí. ¿Hablamos?">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Sí, es para mí
+    </a>
   </div>
 </section>
 
@@ -467,94 +454,6 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
     <a class="btn btn-primary btn-lg reveal" data-d="2" data-wa data-msg="Hola Angélica, he leído tu carta en la web y me gustaría dar el paso. ¿Hablamos?">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
       Escribirle a Angélica
-    </a>
-  </div>
-</section>
-
-<!-- ============ MÉTODO ============ -->
-<section class="band band-alt">
-  <div class="wrap">
-    <span class="kicker reveal">Cómo trabajamos</span>
-    <h2 class="sec-title reveal" data-d="1">Un camino claro,<br>sin improvisar</h2>
-    <p class="sec-intro reveal" data-d="2">No son charlas motivacionales. Detrás hay método, ejercicios prácticos y una psicóloga que ha estado al otro lado de la mesa.</p>
-    <div class="pasos">
-      <div class="paso reveal"><div class="num">01</div><h3>Conversamos</h3><p>Una primera toma de contacto, sin compromiso, para entender tu momento y qué quieres cambiar.</p></div>
-      <div class="paso reveal" data-d="1"><div class="num">02</div><h3>Trabajamos</h3><p>Sesiones 1:1 con herramientas basadas en evidencia — y, cuando ayuda, con el cuerpo y el movimiento.</p></div>
-      <div class="paso reveal" data-d="2"><div class="num">03</div><h3>Te sostienes</h3><p>Te llevas recursos y hábitos para mantener el cambio mucho más allá de nuestro tiempo juntas.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ QUÉ INCLUYE ============ -->
-<section class="band" id="incluye">
-  <div class="wrap" style="text-align:center">
-    <span class="kicker reveal" style="justify-content:center">Cómo funciona</span>
-    <h2 class="sec-title reveal" data-d="1">Qué incluye una sesión</h2>
-    <p class="sec-intro reveal" data-d="2" style="margin-inline:auto">Claro y sin letra pequeña. Y antes de nada, nos conocemos sin que te cueste nada.</p>
-  </div>
-  <div class="wrap incluye-panel reveal" data-d="1">
-    <div class="incluye-grid">
-      <div class="inc">
-        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <span class="inc-l">Modalidad</span><b>Online o presencial</b>
-      </div>
-      <div class="inc">
-        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <span class="inc-l">Duración</span><b>1 hora · 1:1</b>
-      </div>
-      <div class="inc">
-        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
-        <span class="inc-l">Formato</span><b>Sueltas o en bono</b>
-      </div>
-      <div class="inc">
-        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0112 5a5 5 0 019.5 7c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
-        <span class="inc-l">Primer paso</span><b>Toma de contacto gratis</b>
-      </div>
-    </div>
-    <div class="incluye-cta">
-      <a class="btn btn-primary btn-lg" data-wa data-msg="Hola Angélica, me gustaría reservar la primera toma de contacto gratuita de coaching.">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-        Reservar mi toma de contacto gratis
-      </a>
-      <p>Sin compromiso. Si veo que no es para ti, te oriento igual.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ¿ES PARA TI? ============ -->
-<section class="band">
-  <div class="wrap" style="text-align:center">
-    <span class="kicker reveal" style="justify-content:center">Para que no te equivoques</span>
-    <h2 class="sec-title reveal" data-d="1">¿Es esto para ti?</h2>
-    <p class="sec-intro reveal" data-d="2" style="margin-inline:auto">Prefiero ser honesta: no es para todo el mundo. Mira en qué columna te reconoces.</p>
-  </div>
-  <div class="wrap fit-grid">
-    <div class="fit-col yes reveal">
-      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Sí, si…</h3>
-      <ul class="fit-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Sientes que ya es hora de ponerte en tu propia lista.</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Quieres reconstruirte tras una etapa que te apagó.</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Estás dispuesta a hacer el trabajo, con método y acompañamiento.</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Prefieres herramientas reales antes que frases motivadoras.</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Te das permiso para dedicarte una hora, aunque dé un poco de vértigo.</li>
-      </ul>
-    </div>
-    <div class="fit-col no reveal" data-d="1">
-      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg> No, si…</h3>
-      <ul class="fit-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>Buscas una varita mágica o cambiar sin implicarte.</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>Quieres que decidan por ti en vez de acompañarte a decidir.</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>Lo que necesitas es tratamiento psicológico clínico (te oriento con honestidad hacia dónde ir).</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>Crees que cuidarte es un capricho y no una prioridad.</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>Esperas que todo cambie en una sola sesión.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="wrap fit-cta reveal" data-d="1">
-    <p>¿Te has reconocido en la primera columna? Entonces hablemos.</p>
-    <a class="btn btn-primary btn-lg" data-wa data-msg="Hola Angélica, me he reconocido en tu web y creo que el coaching es para mí. ¿Hablamos?">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-      Sí, es para mí
     </a>
   </div>
 </section>
@@ -596,16 +495,38 @@ footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font
   </div>
 </section>
 
-<!-- ============ POR QUÉ FIARTE (credenciales reales) ============ -->
-<section class="band">
-  <div class="wrap">
-    <span class="kicker reveal">Por qué puedes fiarte</span>
-    <h2 class="sec-title reveal" data-d="1">Evidencia, no<br>frases bonitas</h2>
-    <p class="sec-intro reveal" data-d="2">No hago charlas motivacionales. Detrás de cada sesión hay formación reglada, método y una investigación doctoral en curso.</p>
-    <div class="evid reveal" data-d="1">
-      <div class="evid-item"><span class="evid-n">01</span><div><b>Investigación en curso</b><p>Doctoranda en Psicología Social — Universidad Loyola. Mi tesis estudia qué aportan la música y el movimiento a la salud mental.</p></div></div>
-      <div class="evid-item"><span class="evid-n">02</span><div><b>Formación reglada</b><p>Psicóloga titulada (equivalencia reconocida en España) y máster en Psicología Positiva por la Universidad de Jaén.</p></div></div>
-      <div class="evid-item"><span class="evid-n">03</span><div><b>He estado al otro lado</b><p>Más de una década en Recursos Humanos: selección, bienestar y equipos a mi cargo.</p></div></div>
+<!-- ============ QUÉ INCLUYE ============ -->
+<section class="band" id="incluye">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker reveal" style="justify-content:center">Cómo funciona</span>
+    <h2 class="sec-title reveal" data-d="1">Qué incluye una sesión</h2>
+    <p class="sec-intro reveal" data-d="2" style="margin-inline:auto">Sesiones 1:1 con herramientas basadas en evidencia —y, cuando ayuda, con el cuerpo y el movimiento—. Claro y sin letra pequeña: antes de nada, nos conocemos sin que te cueste nada.</p>
+  </div>
+  <div class="wrap incluye-panel reveal" data-d="1">
+    <div class="incluye-grid">
+      <div class="inc">
+        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <span class="inc-l">Modalidad</span><b>Online o presencial</b>
+      </div>
+      <div class="inc">
+        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <span class="inc-l">Duración</span><b>1 hora · 1:1</b>
+      </div>
+      <div class="inc">
+        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
+        <span class="inc-l">Formato</span><b>Sueltas o en bono</b>
+      </div>
+      <div class="inc">
+        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0112 5a5 5 0 019.5 7c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
+        <span class="inc-l">Primer paso</span><b>Toma de contacto gratis</b>
+      </div>
+    </div>
+    <div class="incluye-cta">
+      <a class="btn btn-primary btn-lg" data-wa data-msg="Hola Angélica, me gustaría reservar la primera toma de contacto gratuita de coaching.">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Reservar mi toma de contacto gratis
+      </a>
+      <p>Sin compromiso. Si veo que no es para ti, te oriento igual.</p>
     </div>
   </div>
 </section>
