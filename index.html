@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Angélica Giral · Coaching de amor propio para mujeres</title>
+<meta name="description" content="Sesiones de coaching 1:1 para mujeres: amor propio, reconstruirte tras una relación que te apagó, poner límites y volver a elegirte. Con Angélica Giral, psicóloga. Online y en español." />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:site_name" content="Angélica Giral · Coaching" />
+<meta property="og:title" content="Quererte no es un lujo. Es la base de todo." />
+<meta property="og:description" content="Coaching 1:1 para mujeres que quieren reconstruirse: amor propio, límites y volver a elegirse. Con Angélica Giral, psicóloga." />
+<meta property="og:url" content="https://nuestrosproyectos.github.io/paginaweb/" />
+<meta property="og:image" content="https://nuestrosproyectos.github.io/paginaweb/fotos/og-angelica.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FF5D8F'/><text x='50' y='71' font-size='62' font-family='Georgia,serif' font-style='italic' fill='%232E0A24' text-anchor='middle'>A</text></svg>" />
+
+<style>
+/* ============ TOKENS — Berenjena & shock ============ */
+:root{
+  --bg:#2E0A24;
+  --bg-2:#260820;
+  --bg-soft:#360C2B;
+  --panel:#3C0F31;
+  --panel-2:#48143C;
+  --plum:#5A1247;
+  --crema:#F7E9DE;
+  --crema-70:rgba(247,233,222,.74);
+  --crema-55:rgba(247,233,222,.56);
+  --crema-40:rgba(247,233,222,.4);
+  --shock:#FF5D8F;
+  --shock-2:#FF83A9;
+  --butter:#F4C95D;
+  --linea:rgba(247,233,222,.15);
+  --sombra:0 24px 60px -28px rgba(0,0,0,.7);
+  --radio:18px;
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,1,.32,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth; overflow-x:hidden; overflow-x:clip;}
+body{
+  overflow-x:hidden; overflow-x:clip;
+  font-family:"Manrope",system-ui,sans-serif;
+  color:var(--crema);
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--shock);color:var(--bg)}
+
+h1,h2,h3,.serif{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.02;letter-spacing:-.015em}
+em,.ital{font-style:italic}
+.wrap{width:min(100% - 2.4rem,var(--maxw));margin-inline:auto}
+
+/* ============ GRANO + VIÑETA ============ */
+.grano{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.045;z-index:99}
+@media(max-width:900px){.grano{display:none}}
+.vineta{position:fixed;inset:0;pointer-events:none;z-index:98;box-shadow:inset 0 0 30vmin rgba(0,0,0,.45)}
+
+/* ============ BOTONES ============ */
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-weight:700;font-size:1rem;letter-spacing:.01em;
+  padding:1rem 1.6rem;border-radius:999px;border:1px solid transparent;
+  cursor:pointer;transition:transform .5s var(--ease),background .3s,box-shadow .4s,color .3s,border-color .3s;
+  will-change:transform;
+}
+.btn svg{width:1.15em;height:1.15em}
+.btn-primary{background:var(--shock);color:var(--bg);box-shadow:0 16px 36px -16px rgba(255,93,143,.75)}
+.btn-primary:hover{background:var(--shock-2);box-shadow:0 20px 44px -14px rgba(255,93,143,.9)}
+.btn-ghost{background:transparent;color:var(--crema);border-color:var(--linea)}
+.btn-ghost:hover{border-color:var(--butter);color:var(--butter);background:rgba(247,233,222,.04)}
+.btn-lg{padding:1.15rem 2rem;font-size:1.08rem}
+
+/* ============ HEADER ============ */
+header.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,backdrop-filter .4s,box-shadow .4s}
+header.nav.scrolled{background:rgba(46,10,36,.82);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--linea)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.05rem 0}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:"Fraunces",serif;font-size:1.4rem;font-weight:600}
+.logo .mark{width:38px;height:38px;border-radius:11px;background:var(--shock);color:var(--bg);display:grid;place-items:center;font-style:italic;font-size:1.4rem;flex:none}
+.logo small{display:block;font-family:"Manrope",sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--crema-55);font-weight:600;margin-top:-2px}
+.nav .btn{padding:.7rem 1.25rem;font-size:.92rem}
+
+/* ============ HERO ============ */
+.hero{position:relative;padding:9.5rem 0 4.5rem;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.55}
+.hero-bg{position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(100deg, rgba(46,10,36,.94) 0%, rgba(46,10,36,.62) 40%, rgba(46,10,36,.22) 70%, transparent 90%),
+    radial-gradient(90% 80% at 6% 102%, rgba(255,93,143,.12), transparent 58%),
+    linear-gradient(180deg, rgba(46,10,36,.35) 0%, rgba(38,8,32,.74) 100%);
+}
+@media(max-width:900px){.hero-bg{background:linear-gradient(180deg, rgba(46,10,36,.55) 0%, rgba(46,10,36,.72) 55%, rgba(38,8,32,.82) 100%)}}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--shock);margin-bottom:1.4rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--shock)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2.7rem,6.4vw,5rem);margin-bottom:1.5rem}
+.hero h1 .ital{color:var(--butter)}
+.hero p.lead{font-size:clamp(1.08rem,1.6vw,1.28rem);color:var(--crema-70);max-width:33ch;margin-bottom:2rem;text-wrap:pretty}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
+.hero-micro{font-size:.9rem;color:var(--crema-55);margin-top:1.15rem}
+.hero-micro b{color:var(--crema-70);font-weight:600}
+
+/* retrato */
+.retrato{position:relative;aspect-ratio:4/5;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);
+  background:linear-gradient(145deg,var(--plum) 0%, var(--shock) 135%);
+}
+.retrato .ph{position:absolute;inset:0;display:grid;place-content:center;text-align:center;color:rgba(255,255,255,.92);gap:.4rem;padding:1.5rem}
+.retrato .ph span{font-size:2.6rem}
+.retrato .ph small{font-size:.74rem;letter-spacing:.05em;opacity:.85;max-width:22ch;margin-inline:auto}
+.retrato::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(46,10,36,.6));z-index:1}
+.retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.retrato .firma{position:absolute;left:1.1rem;bottom:1.1rem;color:#fff;z-index:2}
+.retrato .firma b{font-family:"Fraunces",serif;font-size:1.5rem;font-weight:600;display:block;line-height:1}
+.retrato .firma small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.9}
+.sello{position:absolute;top:-18px;right:-18px;width:98px;height:98px;border-radius:50%;background:var(--butter);color:var(--bg);
+  display:grid;place-content:center;text-align:center;font-size:.6rem;font-weight:700;letter-spacing:.06em;line-height:1.3;
+  box-shadow:var(--sombra);z-index:3;transform:rotate(8deg)}
+.sello b{font-family:"Fraunces",serif;font-size:1.15rem;display:block}
+
+/* ============ MARQUEE ============ */
+.marquee{border-block:1px solid var(--linea);background:var(--bg-soft);overflow:hidden;padding:.9rem 0;margin-top:1rem}
+.marquee-track{display:flex;gap:2.6rem;width:max-content;animation:slide 32s linear infinite}
+.marquee-track span{font-family:"Fraunces",serif;font-style:italic;font-size:1.5rem;color:var(--crema-70);white-space:nowrap;display:inline-flex;align-items:center;gap:2.6rem}
+.marquee-track span::after{content:"✦";font-style:normal;color:var(--shock);font-size:.8rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ============ SECCIONES ============ */
+section{position:relative}
+.band{padding:clamp(4rem,9vw,7rem) 0}
+.kicker{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--shock);margin-bottom:1.1rem}
+.kicker::before{content:"";width:22px;height:1px;background:currentColor;opacity:.7}
+.sec-title{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:1.1rem;text-wrap:balance}
+.sec-intro{font-size:1.12rem;color:var(--crema-70);max-width:52ch;text-wrap:pretty}
+
+/* "para quién" — señales */
+
+/* método / pasos */
+
+/* evidencia — tira editorial (distinta a las tarjetas) */
+
+/* qué incluye una sesión */
+.incluye-panel{margin-top:2.6rem;background:linear-gradient(165deg,var(--panel),#2a0820);border:1px solid var(--linea);border-radius:26px;box-shadow:var(--sombra);overflow:hidden}
+.incluye-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.inc{padding:2.2rem 1.4rem;text-align:center;border-left:1px solid var(--linea);display:flex;flex-direction:column;align-items:center;gap:.55rem}
+.inc:first-child{border-left:none}
+.inc-ic{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--bg-2);color:var(--shock);margin-bottom:.1rem}
+.inc-ic svg{width:23px;height:23px}
+.inc-l{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--butter)}
+.inc b{font-size:1.12rem;font-weight:600;color:var(--crema);line-height:1.25}
+.incluye-cta{padding:2rem 1.6rem 2.2rem;text-align:center;border-top:1px solid var(--linea);background:rgba(255,93,143,.05)}
+.incluye-cta p{color:var(--crema-55);font-size:.9rem;margin-top:.9rem}
+@media(max-width:760px){.incluye-grid{grid-template-columns:1fr 1fr}.inc{padding:1.6rem 1rem}.inc:nth-child(odd){border-left:none}.inc:nth-child(n+3){border-top:1px solid var(--linea)}.inc b{font-size:1.02rem}}
+
+/* carta personal */
+.carta-band{background:var(--bg-soft);border-block:1px solid var(--linea)}
+.carta{max-width:680px;margin-inline:auto}
+.carta .kicker{justify-content:flex-start}
+.carta-body p{font-family:"Fraunces",serif;font-size:clamp(1.22rem,2.3vw,1.6rem);line-height:1.5;color:var(--crema);margin-bottom:1.1rem;text-wrap:pretty}
+.carta-body p:first-of-type::first-letter{font-size:3.2em;float:left;line-height:.72;padding:.06em .14em 0 0;color:var(--butter);font-family:"Fraunces",serif;font-weight:600}
+.carta-firma{font-family:"Caveat",cursive;font-size:2.9rem;color:var(--butter);line-height:1;margin:1.2rem 0 1.9rem}
+.carta .btn{margin-top:.2rem}
+
+/* respira conmigo */
+.respira{position:relative;text-align:center;overflow:hidden;background:radial-gradient(60% 55% at 50% 42%, rgba(90,18,71,.55), transparent 72%), var(--bg-2)}
+.respira-in{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+.respira-sub{color:var(--crema-70);max-width:38ch;margin:.5rem auto 2.2rem;text-wrap:pretty}
+.breath{height:300px;display:grid;place-items:center;margin-bottom:1.8rem}
+.breath-circle{width:168px;height:168px;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 38%, rgba(255,93,143,.6), rgba(244,201,93,.16) 58%, transparent 74%);
+  box-shadow:0 0 70px -8px rgba(255,93,143,.55), inset 0 0 44px rgba(255,255,255,.12);
+  border:1px solid rgba(247,233,222,.28);
+  transform:scale(.62);transition:transform 4s ease-in-out;will-change:transform}
+.breath-word{font-family:"Fraunces",serif;font-size:1.3rem;color:var(--crema);letter-spacing:.02em}
+.respira-close{color:var(--crema-70);max-width:44ch;margin:0 auto 1.8rem;font-size:1.08rem;text-wrap:pretty}
+.respira-close b{color:var(--crema)}
+@media(prefers-reduced-motion:reduce){.breath-circle{transition:none;transform:scale(1)}}
+
+/* ¿es para ti? */
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;margin-top:3rem}
+.fit-col{padding:2rem 1.8rem;border-radius:var(--radio);border:1px solid var(--linea)}
+.fit-col.yes{background:linear-gradient(165deg, rgba(255,93,143,.1), var(--panel))}
+.fit-col.no{background:var(--panel)}
+.fit-col h3{font-size:1.45rem;margin-bottom:1.3rem;display:flex;align-items:center;gap:.55rem}
+.fit-col.no h3{color:var(--crema-70)}
+.fit-col h3 svg{width:26px;height:26px;flex:none}
+.fit-col.yes h3 svg{color:var(--shock)}
+.fit-col.no h3 svg{color:var(--crema-40)}
+.fit-list{list-style:none;display:flex;flex-direction:column;gap:.95rem}
+.fit-list li{display:flex;gap:.7rem;align-items:flex-start;color:var(--crema-70);font-size:1.02rem}
+.fit-list li svg{flex:none;width:21px;height:21px;margin-top:.15rem}
+.fit-list li b{color:var(--crema);font-weight:600}
+.fit-col.yes li svg{color:var(--shock)}
+.fit-col.no li svg{color:var(--crema-40)}
+.fit-cta{text-align:center;margin-top:2.4rem}
+.fit-cta p{color:var(--crema);font-size:1.15rem;margin-bottom:1.2rem;font-family:"Fraunces",serif;font-style:italic}
+@media(max-width:760px){.fit-grid{grid-template-columns:1fr}}
+
+/* ============ TEST ============ */
+.test-shell{max-width:720px;margin:2.6rem auto 0;background:var(--panel);border:1px solid var(--linea);border-radius:26px;box-shadow:var(--sombra);overflow:hidden}
+.test-top{padding:1.3rem 1.6rem;border-bottom:1px solid var(--linea);display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.test-top .barra{flex:1;height:7px;border-radius:999px;background:var(--bg-2);overflow:hidden}
+.test-top .barra i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--butter),var(--shock));border-radius:999px;transition:width .5s var(--ease)}
+.test-top small{font-size:.8rem;color:var(--crema-55);font-weight:600;white-space:nowrap}
+.test-body{padding:clamp(1.6rem,4vw,2.6rem)}
+.test-q{animation:fade .5s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}}
+.test-q .paso-lbl{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--shock);margin-bottom:.7rem}
+.test-q h3{font-size:clamp(1.5rem,3.2vw,2rem);margin-bottom:1.5rem;text-wrap:balance}
+.opts{display:flex;flex-direction:column;gap:.7rem}
+.opt{text-align:left;width:100%;padding:1rem 1.2rem;border:1px solid var(--linea);border-radius:14px;background:var(--bg-2);font-size:1.02rem;font-weight:500;color:var(--crema);cursor:pointer;transition:all .25s var(--ease);display:flex;align-items:center;gap:.8rem}
+.opt::before{content:"";width:20px;height:20px;border-radius:50%;border:2px solid var(--butter);flex:none;transition:all .2s}
+.opt:hover{border-color:var(--shock);transform:translateX(4px);background:#330b2a}
+.opt:hover::before{background:var(--shock);border-color:var(--shock);box-shadow:inset 0 0 0 3px var(--panel)}
+
+/* resultado */
+.test-result{text-align:center;animation:fade .6s var(--ease)}
+.test-result .emoji{font-size:2.8rem;margin-bottom:.4rem}
+.test-result h3{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:.9rem}
+.test-result p{color:var(--crema-70);max-width:46ch;margin:0 auto 1.6rem;text-wrap:pretty}
+.test-result .btn{margin-bottom:.8rem}
+.test-reset{background:none;border:none;color:var(--crema-55);font-size:.9rem;cursor:pointer;text-decoration:underline;font-family:inherit}
+
+/* ============ SOBRE MÍ ============ */
+.sobre-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:center}
+.sobre-foto{aspect-ratio:3/4;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);background:linear-gradient(160deg,var(--plum),var(--shock));position:relative}
+.sobre-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.sobre-foto .ph{position:absolute;inset:0;display:grid;place-content:center;color:rgba(255,255,255,.9);text-align:center;gap:.3rem;padding:1.4rem}
+.sobre-foto .ph span{font-size:2.3rem}
+.sobre-foto .ph small{font-size:.72rem;opacity:.85}
+.credss{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+.cred{font-size:.86rem;font-weight:600;color:var(--crema-70);background:var(--panel-2);border:1px solid var(--linea);padding:.5rem .9rem;border-radius:999px}
+.cred b{color:var(--butter)}
+
+/* ============ TESTIMONIOS ============ */
+
+/* ============ SOCIAL / CONTENIDO REAL ============ */
+
+/* ============ FAQ ============ */
+.faq{max-width:760px;margin:2.6rem auto 0}
+.faq details{border-bottom:1px solid var(--linea);padding:.4rem 0}
+.faq summary{list-style:none;cursor:pointer;padding:1.15rem .2rem;font-weight:600;font-size:1.1rem;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:"Fraunces",serif;font-size:1.8rem;color:var(--shock);transition:transform .3s var(--ease);line-height:1}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 .2rem 1.2rem;color:var(--crema-70);max-width:62ch;text-wrap:pretty}
+
+/* ============ CIERRE ============ */
+.cierre{text-align:center;position:relative;overflow:hidden}
+.cierre-bg{position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(80% 120% at 50% 0%, rgba(90,18,71,.9), transparent 58%),
+  radial-gradient(50% 70% at 50% 100%, rgba(255,93,143,.12), transparent 60%),
+  var(--bg)}
+.cierre h2{font-size:clamp(2.3rem,5.5vw,4rem);margin-bottom:1.2rem;text-wrap:balance}
+.cierre h2 .ital{color:var(--butter)}
+.cierre p{font-size:1.15rem;color:var(--crema-70);max-width:44ch;margin:0 auto 2rem}
+
+/* ============ FOOTER ============ */
+footer.pie{background:#230719;color:var(--crema-55);padding:3.2rem 0 2.4rem;font-size:.92rem;border-top:1px solid var(--linea)}
+.pie-grid{display:flex;flex-wrap:wrap;gap:1.4rem;justify-content:space-between;align-items:flex-start}
+.pie a{color:var(--crema-70);transition:color .2s}
+.pie a:hover{color:var(--butter)}
+.pie .legal{max-width:56ch;line-height:1.7;font-size:.84rem;color:var(--crema-40)}
+.pie-links{display:flex;flex-wrap:wrap;gap:1.2rem;font-weight:600}
+
+/* ============ BARRA FLOTANTE MÓVIL ============ */
+.float-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
+  background:rgba(46,10,36,.92);backdrop-filter:blur(12px);border-top:1px solid var(--linea);
+  transform:translateY(120%);transition:transform .45s var(--ease);display:none}
+.float-bar.show{transform:translateY(0)}
+.float-bar .btn{width:100%;justify-content:center}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.06s}
+.reveal[data-d="2"]{transition-delay:.12s}
+.reveal[data-d="3"]{transition-delay:.18s}
+
+/* split-text */
+.palabra{display:inline-block;overflow:hidden;vertical-align:top}
+.palabra>span{display:inline-block;transform:translateY(112%);transition:transform .9s var(--ease)}
+.hero h1.on .palabra>span{transform:none}
+.hero h1 .palabra:nth-child(n)>span{transition-delay:calc(var(--i,0)*60ms)}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:900px){
+  .hero{padding-top:6.8rem}
+  .hero-grid{grid-template-columns:1fr;gap:1.8rem}
+  .retrato{order:-1;max-width:none;margin:0;aspect-ratio:auto;height:42vh;min-height:290px;max-height:430px}
+  .retrato img{object-position:center 12%}
+  .sello{width:82px;height:82px;right:12px;top:12px}
+  .hero p.lead{max-width:none}
+  .sobre-grid{grid-template-columns:1fr;gap:2rem}
+  .sobre-foto{max-width:300px;margin-inline:auto}
+  .nav .btn.desktop{display:none}
+  .float-bar{display:block}
+}
+@media(max-width:560px){
+  .hero{padding-top:6.4rem}
+  .marquee-track span{font-size:1.25rem}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .palabra>span{transform:none}
+  .marquee-track{animation:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Angélica Giral",
+  "alternateName":"Angélica María Giral Vargas",
+  "jobTitle":"Psicóloga y coach de desarrollo personal",
+  "description":"Coaching 1:1 para mujeres: amor propio, límites y reconstrucción personal. Online, en español.",
+  "knowsLanguage":["es","en"],
+  "alumniOf":[
+    {"@type":"CollegeOrUniversity","name":"Universidad de Jaén"},
+    {"@type":"CollegeOrUniversity","name":"Universidad Loyola"}
+  ],
+  "makesOffer":{
+    "@type":"Offer",
+    "itemOffered":{
+      "@type":"Service",
+      "name":"Sesiones de coaching de amor propio para mujeres",
+      "serviceType":"Coaching de desarrollo personal",
+      "areaServed":"Online",
+      "availableLanguage":["es","en"]
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<svg class="grano" aria-hidden="true"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+<div class="vineta" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#inicio" aria-label="Angélica Giral, inicio">
+      <span class="mark">A</span>
+      <span>Angélica Giral<small>Coaching de amor propio</small></span>
+    </a>
+    <a class="btn btn-primary desktop" data-wa data-msg="Hola Angélica, vengo de tu web y me gustaría reservar una sesión de coaching.">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Reservar sesión
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="fotos/hero-seda-poster.jpg" aria-hidden="true">
+    <source src="fotos/hero-seda.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Coaching 1:1 para mujeres</span>
+      <h1 id="hero-title">Quererte no es un lujo. Es la <span class="ital">base de todo.</span></h1>
+      <p class="lead reveal" data-d="1">Acompaño a mujeres a dejar de olvidarse: reconstruirte tras una relación que te apagó, poner límites sin culpa y volver a elegirte. Sin prisa, a tu ritmo, en un espacio seguro.</p>
+      <div class="hero-cta reveal" data-d="2">
+        <a class="btn btn-primary btn-lg" data-wa data-msg="Hola Angélica, vengo de tu web y me gustaría reservar una primera sesión de coaching.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Reservar mi sesión
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#test">Hacer el test gratis →</a>
+      </div>
+      <p class="hero-micro reveal" data-d="3">Primera toma de contacto gratis · <b>Online o presencial</b> · en español · Escríbeme por WhatsApp</p>
+    </div>
+
+    <div class="retrato reveal" data-d="2">
+      <img src="fotos/angelica-1.jpg" alt="Angélica Giral, psicóloga" width="912" height="1136" />
+      <div class="firma"><b>Angélica Giral</b><small>Psicóloga</small></div>
+      <div class="sello"><span><b>+10 años</b>de experiencia</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- marquee de temas -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Amor propio</span><span>Reconstruirte</span><span>Límites que cuidan</span><span>Dejar de postergarte</span><span>Relaciones sanas</span><span>Volver a elegirte</span>
+    <span>Amor propio</span><span>Reconstruirte</span><span>Límites que cuidan</span><span>Dejar de postergarte</span><span>Relaciones sanas</span><span>Volver a elegirte</span>
+  </div>
+</div>
+
+<!-- ============ ¿ES PARA TI? ============ -->
+<section class="band">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker reveal" style="justify-content:center">¿Es para ti?</span>
+    <h2 class="sec-title reveal" data-d="1">Te cuidas de todos<br>menos de ti</h2>
+    <p class="sec-intro reveal" data-d="2" style="margin-inline:auto">No hace falta estar rota para merecer un espacio propio. Pero prefiero ser honesta: esto no es para todo el mundo. Mira en qué columna te reconoces.</p>
+  </div>
+  <div class="wrap fit-grid">
+    <div class="fit-col yes reveal">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Es para ti si…</h3>
+      <ul class="fit-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Sales de una relación</b> (o de una etapa) que te fue apagando y ya no te reconoces.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Dices «sí»</b> cuando quieres decir «no», y luego te pesa.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Postergas lo tuyo</b> una y otra vez: «ya habrá tiempo para mí».</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Te hablas con una dureza</b> que no le permitirías a nadie.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Quieres cambiar de verdad</b>, con método y no con frases bonitas.</span></li>
+      </ul>
+    </div>
+    <div class="fit-col no reveal" data-d="1">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg> No es para ti si…</h3>
+      <ul class="fit-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Buscas una varita mágica o cambiar sin implicarte.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Quieres que decidan por ti en vez de acompañarte a decidir.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Lo que necesitas es tratamiento psicológico clínico (te oriento con honestidad hacia dónde ir).</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Esperas que todo cambie en una sola sesión.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap fit-cta reveal" data-d="1">
+    <p>¿Te has reconocido en la primera columna? Entonces hablemos.</p>
+    <a class="btn btn-primary btn-lg" data-wa data-msg="Hola Angélica, me he reconocido en tu web y creo que el coaching es para mí. ¿Hablamos?">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Sí, es para mí
+    </a>
+  </div>
+</section>
+
+<!-- ============ CARTA ============ -->
+<section class="band carta-band">
+  <div class="wrap carta">
+    <span class="kicker reveal">Una carta para ti</span>
+    <div class="carta-body reveal" data-d="1">
+      <p>Si has llegado hasta aquí, me atrevo a imaginar algo: que llevas mucho tiempo siendo fuerte para todos y que, por dentro, estás más cansada de lo que cuentas.</p>
+      <p>Que respondes «estoy bien» en automático. Que te ocupas de todo y de todas, menos de ti. Y que una parte de ti intuye que mereces algo más que aguantar.</p>
+      <p>Yo también estuve ahí. Y entendí —viviéndolo, no en una frase bonita— que quererte no es ponerte la última: es la base desde la que se sostiene todo lo demás.</p>
+      <p>No necesitas estar rota para empezar. Solo querer dejar de abandonarte.</p>
+      <p>Cuando estés lista, aquí estoy.</p>
+    </div>
+    <div class="carta-firma reveal" data-d="1">Angélica</div>
+    <a class="btn btn-primary btn-lg reveal" data-d="2" data-wa data-msg="Hola Angélica, he leído tu carta en la web y me gustaría dar el paso. ¿Hablamos?">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Escribirle a Angélica
+    </a>
+  </div>
+</section>
+
+<!-- ============ TEST (ELEMENTO ESTRELLA) ============ -->
+<section class="band" id="test">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker reveal" style="justify-content:center">Test · 1 minuto · anónimo</span>
+    <h2 class="sec-title reveal" data-d="1">¿Cómo está tu amor propio?</h2>
+    <p class="sec-intro reveal" data-d="2" style="margin-inline:auto">Cinco preguntas honestas. Al final, una lectura cálida de dónde estás y un primer paso a tu medida.</p>
+  </div>
+
+  <div class="test-shell reveal" data-d="1" id="test-shell">
+    <div class="test-top">
+      <div class="barra"><i id="test-fill"></i></div>
+      <small id="test-count">1 / 5</small>
+    </div>
+    <div class="test-body" id="test-body"></div>
+  </div>
+</section>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section class="band" style="background:var(--bg-soft);border-block:1px solid var(--linea)">
+  <div class="wrap sobre-grid">
+    <div class="sobre-foto reveal">
+      <img src="fotos/angelica-escenario.jpg" alt="Angélica Giral impartiendo una conferencia" width="1023" height="1537" loading="lazy" decoding="async" />
+    </div>
+    <div>
+      <span class="kicker reveal">Quién te acompaña</span>
+      <h2 class="sec-title reveal" data-d="1">Soy Angélica, y he<br>estado donde tú estás</h2>
+      <p class="sec-intro reveal" data-d="2">Durante años fui la mujer que lo sostenía todo: la que gestiona, la que anima, la que ayuda a todos… incluso cuando se olvidaba de sí misma. Soy psicóloga, máster en Psicología Positiva y doctoranda en Psicología Social, y pasé una década dentro de departamentos de Recursos Humanos. Pero lo que hoy es el corazón de mi trabajo lo aprendí viviéndolo: <b style="color:var(--crema)">quererse no es un capricho, es la base sobre la que se sostiene todo lo demás</b> — una vida, una familia, una carrera.</p>
+      <div class="credss reveal" data-d="2">
+        <span class="cred"><b>·</b> Psicóloga titulada</span>
+        <span class="cred"><b>·</b> Máster en Psicología Positiva · U. de Jaén</span>
+        <span class="cred"><b>·</b> Doctoranda · U. Loyola</span>
+        <span class="cred"><b>·</b> +10 años en RR.HH.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ INCLUYE ============ -->
+<section class="band" id="incluye">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker reveal" style="justify-content:center">Cómo funciona</span>
+    <h2 class="sec-title reveal" data-d="1">Qué incluye una sesión</h2>
+    <p class="sec-intro reveal" data-d="2" style="margin-inline:auto">Sesiones 1:1 con herramientas basadas en evidencia —y, cuando ayuda, con el cuerpo y el movimiento—. Claro y sin letra pequeña: antes de nada, nos conocemos sin que te cueste nada.</p>
+  </div>
+  <div class="wrap incluye-panel reveal" data-d="1">
+    <div class="incluye-grid">
+      <div class="inc">
+        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <span class="inc-l">Modalidad</span><b>Online o presencial</b>
+      </div>
+      <div class="inc">
+        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <span class="inc-l">Duración</span><b>1 hora · 1:1</b>
+      </div>
+      <div class="inc">
+        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
+        <span class="inc-l">Formato</span><b>Sueltas o en bono</b>
+      </div>
+      <div class="inc">
+        <div class="inc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0112 5a5 5 0 019.5 7c-2.5 4.5-9.5 9-9.5 9z"/></svg></div>
+        <span class="inc-l">Primer paso</span><b>Toma de contacto gratis</b>
+      </div>
+    </div>
+    <div class="incluye-cta">
+      <a class="btn btn-primary btn-lg" data-wa data-msg="Hola Angélica, me gustaría reservar la primera toma de contacto gratuita de coaching.">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Reservar mi toma de contacto gratis
+      </a>
+      <p>Sin compromiso. Si veo que no es para ti, te oriento igual.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="band" style="background:var(--bg-soft);border-block:1px solid var(--linea)">
+  <div class="wrap" style="text-align:center">
+    <span class="kicker reveal" style="justify-content:center">Antes de escribirme</span>
+    <h2 class="sec-title reveal" data-d="1">Preguntas frecuentes</h2>
+  </div>
+  <div class="wrap faq reveal" data-d="1">
+    <details open><summary>¿Esto es terapia psicológica?</summary><div class="ans">No. El coaching y el acompañamiento son herramientas de desarrollo personal: no son asistencia sanitaria ni tratamiento clínico. Si lo que necesitas es terapia, te lo digo con honestidad y te oriento sobre dónde buscarla.</div></details>
+    <details><summary>¿Cómo son las sesiones?</summary><div class="ans">Son 1:1 y duran una hora, en español. Puedes hacerlas online (videollamada) o presenciales. Empezamos siempre con una primera toma de contacto gratuita por WhatsApp para vernos y comprobar si encajamos; a partir de ahí las tomas sueltas o en bono, a tu ritmo.</div></details>
+    <details><summary>¿Cuánto cuesta?</summary><div class="ans">Depende del acompañamiento que necesites. Te lo cuento claro en la primera conversación por WhatsApp, sin letra pequeña y sin compromiso.</div></details>
+    <details><summary>Nunca he hecho algo así. ¿Pasa algo?</summary><div class="ans">Para nada. La mayoría llega igual. No necesitas tenerlo claro ni «estar fatal»: basta con que quieras empezar a cuidarte. Yo te guío paso a paso.</div></details>
+    <details><summary>¿Desde qué países puedo hacerlo?</summary><div class="ans">Al ser online, puedo acompañarte desde España, Europa y Latinoamérica. Solo necesitas conexión y un rato para ti.</div></details>
+  </div>
+</section>
+
+<!-- ============ RESPIRA ============ -->
+<section class="band respira" id="respira">
+  <div class="wrap respira-in">
+    <span class="kicker reveal" style="justify-content:center;color:var(--butter)">Un momento para ti</span>
+    <h2 class="sec-title reveal" data-d="1">Respira conmigo</h2>
+    <p class="respira-sub reveal" data-d="2">Treinta segundos. Solo tú y tu respiración. Déjate llevar por el círculo.</p>
+    <div class="breath reveal" data-d="1"><div class="breath-circle"><span class="breath-word" id="breathWord">Respira conmigo</span></div></div>
+    <p class="respira-close reveal">Eso que acabas de hacer por ti —parar y respirar— también se entrena. Imagina una hora entera así, <b>solo para ti</b>.</p>
+    <a class="btn btn-primary btn-lg reveal" data-wa data-msg="Hola Angélica, quiero empezar a cuidarme de verdad. ¿Me cuentas cómo son las sesiones?">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Quiero sentirme así más a menudo
+    </a>
+  </div>
+</section>
+
+<!-- ============ CIERRE ============ -->
+<section class="band cierre">
+  <div class="cierre-bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="kicker reveal" style="justify-content:center">Da el primer paso</span>
+    <h2 class="reveal" data-d="1">Hoy puede ser el día<br>en que <span class="ital">vuelves a elegirte.</span></h2>
+    <p class="reveal" data-d="2">Escríbeme por WhatsApp y hablamos. Sin compromiso, sin prisa, a tu ritmo.</p>
+    <a class="btn btn-primary btn-lg reveal" data-d="2" data-wa data-msg="Hola Angélica, vengo de tu web y me gustaría dar el primer paso con una sesión de coaching.">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Hablar con Angélica
+    </a>
+    <p class="reveal" data-d="3" style="font-size:.9rem;color:var(--crema-55);margin-top:1.1rem">Te responde ella, no un robot.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="pie">
+  <div class="wrap pie-grid">
+    <div>
+      <div class="logo" style="margin-bottom:.8rem"><span class="mark">A</span><span style="font-size:1.3rem">Angélica Giral</span></div>
+      <p class="legal">Coaching y acompañamiento de desarrollo personal. No sustituye la atención psicológica sanitaria ni el tratamiento clínico. Si atraviesas una urgencia emocional, en España puedes llamar al <b style="color:var(--crema-70)">024</b> (atención a la conducta suicida) o al <b style="color:var(--crema-70)">112</b>.</p>
+    </div>
+    <div class="pie-links">
+      <a data-wa data-msg="Hola Angélica, me gustaría más información sobre las sesiones de coaching.">WhatsApp</a>
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="privacidad.html">Privacidad</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:2rem;font-size:.8rem;color:var(--crema-40)">© <span id="year"></span> Angélica Giral · Hecho con cuidado.</div>
+</footer>
+
+<!-- ============ BARRA FLOTANTE MÓVIL ============ -->
+<div class="float-bar" id="floatbar">
+  <a class="btn btn-primary" data-wa data-msg="Hola Angélica, vengo de tu web y me gustaría reservar una sesión de coaching.">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    Reservar sesión gratis
+  </a>
+</div>
+
+<script>
+/* ======== CONFIG — CAMBIAR EL NÚMERO AQUÍ ======== */
+const CONFIG = {
+  // Número de WhatsApp SOLO para coaching, formato internacional sin "+" ni espacios.
+  whatsapp: "34657515151"
+};
+
+(function(){
+  const num = CONFIG.whatsapp.replace(/\D/g,"");
+  const valido = num.length >= 8;
+  document.querySelectorAll("[data-wa]").forEach(a=>{
+    const msg = encodeURIComponent(a.getAttribute("data-msg") || "Hola Angélica, me gustaría más información.");
+    if(valido){ a.href = `https://wa.me/${num}?text=${msg}`; a.target = "_blank"; a.rel = "noopener"; }
+    else { a.href = "#"; a.addEventListener("click",e=>{e.preventDefault();alert("⚠️ Falta configurar el número de WhatsApp de coaching (CONFIG.whatsapp).");}); }
+  });
+})();
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const nav = document.getElementById("nav");
+const floatbar = document.getElementById("floatbar");
+const heroCta = document.querySelector(".hero-cta");
+function onScroll(){ nav.classList.toggle("scrolled", window.scrollY > 24); }
+window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+if(heroCta && "IntersectionObserver" in window){
+  new IntersectionObserver(es=>{ es.forEach(e=> floatbar.classList.toggle("show", !e.isIntersecting && window.scrollY > 300)); },{rootMargin:"-10px"}).observe(heroCta);
+}
+
+/* vídeo del hero: pausar fuera de pantalla + respetar reduce motion */
+(function(){
+  const vid = document.querySelector(".hero-video");
+  if(!vid) return;
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){ vid.removeAttribute("autoplay"); vid.pause(); return; }
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ vid.play().catch(()=>{}); } else { vid.pause(); } }),{threshold:.05}).observe(vid);
+  }
+})();
+
+if("IntersectionObserver" in window){
+  const io = new IntersectionObserver(es=>{ es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }); },{threshold:.08, rootMargin:"0px 0px -4% 0px"});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+} else { document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in")); }
+
+/* split-text */
+(function(){
+  const h1 = document.getElementById("hero-title");
+  if(!h1) return;
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){ h1.classList.add("on"); return; }
+  const full = h1.textContent.trim();
+  h1.setAttribute("aria-label", full);
+  const frag = [];
+  h1.childNodes.forEach(node=>{
+    if(node.nodeType===3){ node.textContent.trim().split(/\s+/).filter(Boolean).forEach(w=>frag.push({w, ital:false})); }
+    else if(node.nodeType===1){ node.textContent.trim().split(/\s+/).filter(Boolean).forEach(w=>frag.push({w, ital:node.classList.contains("ital")})); }
+  });
+  h1.innerHTML = frag.map((f,i)=>`<span class="palabra" aria-hidden="true" style="--i:${i}"><span${f.ital?' class="ital" style="color:var(--butter)"':''}>${f.w}</span></span>`).join(" ");
+  requestAnimationFrame(()=>requestAnimationFrame(()=>h1.classList.add("on")));
+})();
+
+/* botón magnético (solo escritorio) */
+if(matchMedia("(pointer:fine)").matches && !matchMedia("(prefers-reduced-motion:reduce)").matches){
+  document.querySelectorAll(".btn-primary").forEach(btn=>{
+    btn.addEventListener("mousemove",e=>{ const r=btn.getBoundingClientRect(); const dx=e.clientX-(r.left+r.width/2); const dy=e.clientY-(r.top+r.height/2); btn.style.transform=`translate(${dx*0.18}px,${dy*0.22}px)`; });
+    btn.addEventListener("mouseleave",()=>{ btn.style.transform=""; });
+  });
+}
+
+/* ======== RESPIRA CONMIGO ======== */
+(function(){
+  const circle = document.querySelector(".breath-circle");
+  const word = document.getElementById("breathWord");
+  if(!circle || !word) return;
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){ word.textContent = "Respira hondo"; circle.style.transform = "scale(1)"; return; }
+  let running = false, timers = [];
+  const clear = ()=>{ timers.forEach(clearTimeout); timers = []; };
+  function cycle(){
+    word.textContent = "Inhala…";
+    circle.style.transition = "transform 4s ease-in-out";
+    circle.style.transform = "scale(1.12)";
+    timers.push(setTimeout(()=>{ word.textContent = "Sostén…"; }, 4000));
+    timers.push(setTimeout(()=>{ word.textContent = "Suelta…"; circle.style.transition = "transform 6s ease-in-out"; circle.style.transform = "scale(.62)"; }, 6000));
+    timers.push(setTimeout(()=>{ if(running) cycle(); }, 12200));
+  }
+  function start(){ if(running) return; running = true; cycle(); }
+  function stop(){ running = false; clear(); word.textContent = "Respira conmigo"; circle.style.transition = "transform 1.2s ease"; circle.style.transform = "scale(.62)"; }
+  if("IntersectionObserver" in window){
+    new IntersectionObserver(es=>es.forEach(e=>{ e.isIntersecting ? start() : stop(); }),{threshold:.45}).observe(circle);
+  } else { start(); }
+})();
+
+/* ======== TEST: ¿cómo está tu amor propio? ======== */
+const TEST = {
+  preguntas:[
+    {q:"Cuando necesitas decir «no», ¿qué pasa?", a:[
+      {t:"Lo digo sin problema", v:2},
+      {t:"Lo digo, pero luego me siento culpable", v:1},
+      {t:"Casi siempre acabo diciendo «sí»", v:0}]},
+    {q:"¿Cómo te hablas cuando algo te sale mal?", a:[
+      {t:"Con comprensión, como a una amiga", v:2},
+      {t:"Depende del día", v:1},
+      {t:"Me machaco bastante", v:0}]},
+    {q:"Tiempo solo para ti, sin culpa:", a:[
+      {t:"Lo tengo y lo protejo", v:2},
+      {t:"A veces, cuando puedo", v:1},
+      {t:"Casi nunca, siempre va antes todo lo demás", v:0}]},
+    {q:"Después de una relación o un golpe, ¿cómo te sientes contigo?", a:[
+      {t:"Entera, me reconozco", v:2},
+      {t:"A medias, me cuesta", v:1},
+      {t:"Perdida, no sé quién soy ahora", v:0}]},
+    {q:"La frase que más te suena por dentro:", a:[
+      {t:"«Estoy a gusto conmigo»", v:2},
+      {t:"«Podría cuidarme más»", v:1},
+      {t:"«Ya habrá tiempo para mí»", v:0}]}
+  ],
+  resultados:[
+    {min:0,max:3, e:"🌱", t:"Estás muy pendiente de los demás", p:"Te has acostumbrado a ir la última. No pasa nada: es el punto de partida de muchísimas mujeres, y se trabaja. Una primera sesión puede ser justo el espacio que llevas tiempo necesitando.", msg:"Hola Angélica, hice el test de amor propio y me salió que estoy muy pendiente de los demás. Me gustaría reservar una sesión."},
+    {min:4,max:7, e:"🤍", t:"Lo intentas, pero te cuesta sostenerlo", p:"Tienes la intención y algunos recursos, pero la culpa y las prisas te ganan a menudo. Con método y acompañamiento, eso que haces «a ratos» puede volverse tu base estable.", msg:"Hola Angélica, hice el test de amor propio y me salió un punto intermedio. Me gustaría reservar una sesión."},
+    {min:8,max:10, e:"✨", t:"Tienes una buena base", p:"Te cuidas y te reconoces: enhorabuena, no es lo habitual. Aun así, siempre hay un siguiente nivel — límites más firmes, propósito, seguir creciendo. Hablamos si te apetece pulirlo.", msg:"Hola Angélica, hice el test de amor propio y tengo buena base. Me gustaría una sesión para seguir creciendo."}
+  ]
+};
+(function(){
+  const body = document.getElementById("test-body");
+  const fill = document.getElementById("test-fill");
+  const count = document.getElementById("test-count");
+  if(!body) return;
+  let idx=0, score=0;
+  const num = CONFIG.whatsapp.replace(/\D/g,"");
+  const valido = num.length>=8;
+
+  function pregunta(){
+    const p = TEST.preguntas[idx];
+    count.textContent = `${idx+1} / ${TEST.preguntas.length}`;
+    fill.style.width = `${(idx/TEST.preguntas.length)*100}%`;
+    body.innerHTML = `<div class="test-q">
+      <div class="paso-lbl">Pregunta ${idx+1}</div>
+      <h3>${p.q}</h3>
+      <div class="opts">${p.a.map((o)=>`<button class="opt" data-v="${o.v}">${o.t}</button>`).join("")}</div>
+    </div>`;
+    body.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
+      score += parseInt(b.dataset.v,10);
+      idx++;
+      if(idx < TEST.preguntas.length) pregunta(); else resultado();
+    }));
+  }
+  function resultado(){
+    fill.style.width = "100%";
+    count.textContent = "Resultado";
+    const r = TEST.resultados.find(x=>score>=x.min && score<=x.max) || TEST.resultados[1];
+    const msg = encodeURIComponent(r.msg);
+    const href = valido ? `https://wa.me/${num}?text=${msg}` : "#";
+    body.innerHTML = `<div class="test-result">
+      <div class="emoji">${r.e}</div>
+      <h3>${r.t}</h3>
+      <p>${r.p}</p>
+      <a class="btn btn-primary btn-lg" ${valido?`href="${href}" target="_blank" rel="noopener"`:`href="#" data-noconf`}>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.516 5.26l-.999 3.648 3.472-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Reservar mi sesión
+      </a>
+      <br><button class="test-reset">Volver a empezar</button>
+    </div>`;
+    body.querySelector(".test-reset").addEventListener("click",()=>{idx=0;score=0;pregunta();});
+    const nc = body.querySelector("[data-noconf]");
+    if(nc) nc.addEventListener("click",e=>{e.preventDefault();alert("⚠️ Falta configurar el número de WhatsApp de coaching (CONFIG.whatsapp).");});
+  }
+  pregunta();
+})();
+</script>
+</body>
+</html>
